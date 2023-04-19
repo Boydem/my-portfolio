@@ -1,3 +1,6 @@
-export function Logo() {
-    return <section className='logo'>Hello from Logo</section>
+interface Props {
+    size: 'small' | 'large'
+}
+export function Logo({ size = 'small' }: Props) {
+    return <section className='logo'>Noam Dahan Portfolio</section>
 }

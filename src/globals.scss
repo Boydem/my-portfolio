@@ -1,8 +1,5 @@
-@font-face {
-    font-family: 'Hacky';
-    src: url('./assets/fonts/Hacky\ Demo.ttf');
-}
-
+// Base
+@import './assets/styles/typography';
 @import './assets/styles/functions';
 @import './assets/styles/mixins';
 @import './assets/styles/variables';
@@ -10,11 +7,18 @@
 @import './assets/styles/setup';
 @import './assets/styles/layout';
 
-* {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-}
+// Components
+@import './components/LightDarkButtons/LightDarkButtons';
+@import './components/Logo/Logo';
+@import './components/Menu/Menu';
+@import './components/MenuItems/MenuItems';
+@import './components/Text/Text';
+
+// Pages
+@import './pages/Home/Home.scss';
+@import './pages/Info/Info.scss';
+@import './pages/ProjectDetails/ProjectDetails.scss';
+@import './pages/ProjectIndex/ProjectIndex.scss';
 
 html,
 body {
