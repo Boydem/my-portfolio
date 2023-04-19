@@ -1,0 +1,36 @@
+@font-face {
+    font-family: 'Hacky';
+    src: url('./assets/fonts/Hacky\ Demo.ttf');
+}
+
+@import './assets/styles/functions';
+@import './assets/styles/mixins';
+@import './assets/styles/variables';
+@import './assets/styles/reset';
+@import './assets/styles/setup';
+@import './assets/styles/layout';
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html,
+body {
+    max-width: 100vw;
+    overflow-x: hidden;
+    font-family: 'Hacky', cursive;
+    font-size: 30px;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+@media (prefers-color-scheme: dark) {
+    html {
+        color-scheme: dark;
+    }
+}
