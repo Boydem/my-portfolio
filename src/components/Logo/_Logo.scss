@@ -1,2 +1,12 @@
 .logo {
+    padding: 1rem;
+    line-height: 0.8125;
+    text-transform: uppercase;
+    font-feature-settings: 'palt';
+    &.small {
+        font-size: 40px;
+    }
+    &.large {
+        font-size: 100px;
+    }
 }

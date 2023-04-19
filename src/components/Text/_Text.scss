@@ -1,21 +1,21 @@
 .text {
-    .type-regular {
-        color: $main-color;
+    &.type-regular {
+        color: $text-color;
     }
-    .type-title {
-        font-size: 60px;
-        color: $main-color;
+    &.type-title {
+        font-size: $text-large;
+        color: $text-color;
     }
-    .type-muted {
+    &.type-muted {
         color: gray;
     }
-    .size-small {
-        font-size: 24px;
+    &.size-small {
+        font-size: $text-small;
     }
-    .size-medium {
-        font-size: 36px;
+    &.size-medium {
+        font-size: $text-medium;
     }
-    .size-large {
-        font-size: 60px;
+    &.size-large {
+        font-size: $text-large;
     }
 }

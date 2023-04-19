@@ -6,10 +6,10 @@ import { Gallery } from './parts/Gallery/Gallery'
 export function Home() {
     return (
         <section className='home'>
-            <div className='flex space-between align-bottom'>
+            <header className='flex space-between align-bottom'>
                 <Logo size={'large'} />
                 <LightDarkButtons />
-            </div>
+            </header>
             <Gallery />
             <Text>
                 Frontend developer <br /> based in Tel Aviv.

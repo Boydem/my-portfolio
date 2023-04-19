@@ -1,8 +1,8 @@
 // Base
 @import './assets/styles/typography';
+@import './assets/styles/variables';
 @import './assets/styles/functions';
 @import './assets/styles/mixins';
-@import './assets/styles/variables';
 @import './assets/styles/reset';
 @import './assets/styles/setup';
 @import './assets/styles/layout';
@@ -19,22 +19,3 @@
 @import './pages/Info/Info.scss';
 @import './pages/ProjectDetails/ProjectDetails.scss';
 @import './pages/ProjectIndex/ProjectIndex.scss';
-
-html,
-body {
-    max-width: 100vw;
-    overflow-x: hidden;
-    font-family: 'Hacky', cursive;
-    font-size: 30px;
-}
-
-a {
-    color: inherit;
-    text-decoration: none;
-}
-
-@media (prefers-color-scheme: dark) {
-    html {
-        color-scheme: dark;
-    }
-}

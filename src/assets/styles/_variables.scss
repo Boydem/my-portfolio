@@ -1,2 +1,28 @@
-$main-color: #fff;
-$main-bg-color: #000;
+:root {
+}
+// Dark/Light mode vars
+html[data-theme='light'] {
+    --text-color: #1b1b1b;
+    --muted-color: #464646;
+    --highlight-color: #000000;
+    --bg-color: #f2f2f2;
+}
+html {
+    --text-color: #f2f2f2;
+    --muted-color: #464646;
+    --highlight-color: #ffffff;
+    --bg-color: #000;
+}
+// Colors
+$text-color: var(--text-color);
+$bg-color: var(--bg-color);
+
+// Text Sizes
+$text-small: 24px;
+$text-medium: 36px;
+$text-large: 70px;
+
+// Fonts
+$font-family-serif: 'Hacky', Arial, Helvetica, sans-serif;
+$font-family-sans: 'Hacky', Arial, Helvetica, sans-serif;
+$base-line-hight: 1.125;

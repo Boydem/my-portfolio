@@ -7,6 +7,11 @@ export function LightDarkButtons() {
 
     function onToggle(mode: Mode) {
         if (currentMode === mode) return
+        if (mode === 'light') {
+            document.documentElement.setAttribute('data-theme', 'light')
+        } else {
+            document.documentElement.setAttribute('data-theme', 'dark')
+        }
         setCurrentMode(mode)
     }
 
