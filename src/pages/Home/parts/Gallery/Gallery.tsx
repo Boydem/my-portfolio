@@ -1,6 +1,7 @@
 import { IGalleryImage } from '../../Home'
-import { useLayoutEffect, useState, useRef } from 'react'
+import { useLayoutEffect, useState, useRef, useEffect } from 'react'
 import { utilService } from '../../../../services/util.service'
+import { useMouseMove } from '../../../../hooks/useMouseMove'
 interface Props {
     items: IGalleryImage[]
 }
@@ -9,32 +10,27 @@ export function Gallery({ items }: Props) {
     const [translateX, setTranslateX] = useState<number>(0)
     const contentRef = useRef<HTMLDivElement>(null)
     const innerRef = useRef<HTMLDivElement>(null)
-
-    useLayoutEffect(() => {
-        function handleMouseMove(ev: MouseEvent) {
-            const shouldHandleMouseMove = contentRef.current && innerRef.current
-            if (!shouldHandleMouseMove) return
-
-            const { clientX } = ev
-            const innerWidth = innerRef.current.offsetWidth
-            const contentWidth = contentRef.current.offsetWidth
-            const margin = 0.2 * innerWidth
-            const trackWidth = 0.8 * innerWidth
-            const totalDistance = contentWidth - innerWidth
-            const end = innerWidth - (innerWidth - trackWidth) / 2
-            const start = innerRef.current.offsetLeft + margin
-            if (clientX < start) setTranslateX(0)
-            else if (clientX > end) setTranslateX(-totalDistance)
-            else if (clientX > start && clientX < end) {
-                const percent = (clientX - start) / (end - start)
-                setTranslateX(-percent * totalDistance)
-            }
+    function handleGalleryMove(clientX: number) {
+        const shouldHandleGalleryMove = contentRef.current && innerRef.current
+        if (!shouldHandleGalleryMove) return
+        const innerWidth = innerRef.current.offsetWidth
+        const contentWidth = contentRef.current.offsetWidth
+        const margin = 0.2 * innerWidth
+        const trackWidth = 0.8 * innerWidth
+        const totalDistance = contentWidth - innerWidth
+        const end = innerWidth - (innerWidth - trackWidth) / 2
+        const start = innerRef.current.offsetLeft + margin
+        if (clientX < start) setTranslateX(0)
+        else if (clientX > end) setTranslateX(-totalDistance)
+        else if (clientX > start && clientX < end) {
+            const percent = (clientX - start) / (end - start)
+            setTranslateX(-percent * totalDistance)
         }
-        window.addEventListener('mousemove', handleMouseMove)
-        return () => {
-            window.removeEventListener('mousemove', handleMouseMove)
-        }
-    }, [])
+    }
+    const mousePos = useMouseMove()
+    useEffect(() => {
+        handleGalleryMove(mousePos.x)
+    }, [mousePos.x])
 
     return (
         <section className='gallery disable-scrollbar'>
@@ -46,7 +42,7 @@ export function Gallery({ items }: Props) {
                 >
                     {items && items.length
                         ? items.map(item => (
-                              <div data-hover={true} className='item-container' key={item._id}>
+                              <div data-link-hover={true} className='item-container' key={item._id}>
                                   <img src={item.imgURL} alt='project' />
                               </div>
                           ))
