@@ -1,15 +1,14 @@
 import { useCallback, useEffect, useState } from 'react'
+import { useMouseMove } from '../../hooks/useMouseMove'
 
 export function Cursor() {
-    const [mousePos, setMousePos] = useState<any>({ x: 0, y: 0 })
+    // const [mousePos, setMousePos] = useState<{ x: number; y: number }>({ x: 0, y: 0 })
     const [lastHoveredTarget, setLastHoveredTarget] = useState<Element | null>(null)
     const [isHover, setIsHover] = useState<boolean>(false)
+    const [isLinkHover, setIsLinkHover] = useState<boolean>(false)
 
-    const handleMouseMove = useCallback(
-        (ev: MouseEvent) => {
-            const target = ev.target as HTMLElement
-            const { clientX, clientY } = ev
-
+    const handleHoverEffects = useCallback(
+        (target: HTMLElement) => {
             // Check if the target or any of its parents have the data-hover attribute
             const parentWithDataHover = target ? target.closest('[data-hover="true"]') : null
 
@@ -19,28 +18,25 @@ export function Cursor() {
                 setIsHover(!!parentWithDataHover)
             }
 
-            setMousePos({ x: clientX, y: clientY })
+            // Check if the target or any of its parents have the data-link-hover attribute
+            const parentWithDataLinkHover = target ? target.closest('[data-link-hover="true"]') : null
+
+            // Only update the link hover state if the target has changed or the data-link-hover attribute has changed
+            if (lastHoveredTarget !== parentWithDataLinkHover) {
+                setLastHoveredTarget(parentWithDataLinkHover)
+                setIsLinkHover(!!parentWithDataLinkHover)
+            }
         },
         [lastHoveredTarget]
     )
-
-    useEffect(() => {
-        window.addEventListener('mousemove', handleMouseMove)
-        return () => {
-            window.removeEventListener('mousemove', handleMouseMove)
-        }
-    }, [handleMouseMove])
+    const mousePos = useMouseMove(handleHoverEffects)
 
     return (
         <div
-            className={`cursor ${isHover ? 'hover' : ''}`}
-            style={{ transform: `translate3d(${mousePos.x}px,${mousePos.y}px,0px) scale(${isHover ? 3 : 1})` }}
-            // style={{
-            //     transition: 'top 0.1s linear, left 0.1s linear,transform 0.13s ease-in-out',
-            //     top: `${mousePos.y}px`,
-            //     left: `${mousePos.x}px`,
-            //     transform: `scale(${isHover ? 3 : 1})`,
-            // }}
+            className={`cursor ${isHover ? 'hover' : ''} ${isLinkHover ? 'link-hover' : ''}`}
+            style={{
+                transform: `translate3d(${mousePos.x}px,${mousePos.y}px,0px) scale(${isHover || isLinkHover ? 3 : 1})`,
+            }}
         ></div>
     )
 }

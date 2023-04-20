@@ -7,15 +7,19 @@
 .cursor {
     position: absolute;
     top: 0;
-    left: 0%;
+    left: 0;
     width: 0.5rem;
     height: 0.5rem;
     border-radius: 100px;
     background-color: $c-text;
     pointer-events: none;
-    transition: transform 0.1s;
+    transition: transform 0.1s, opacity 0.2s ease-in-out;
     &.hover {
-        transition: transform 0.1s;
+        transition: transform 0.1s, opacity 0.2s ease-in-out;
         opacity: 0.5;
+    }
+    &.link-hover {
+        transition: transform 0.1s, opacity 0.2s ease-in-out;
+        opacity: 1;
     }
 }

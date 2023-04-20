@@ -3,7 +3,7 @@ import { Text } from '../Text/Text'
 
 export function Menu() {
     return (
-        <button className='menu'>
+        <button data-hover={true} className='menu'>
             <BiMenuAltRight />
             Menu
         </button>
