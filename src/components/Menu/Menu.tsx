@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { BiMenuAltRight } from 'react-icons/bi'
 import { Text } from '../Text/Text'
-import { motion } from 'framer-motion'
+import { motion, AnimatePresence } from 'framer-motion'
 import { MenuPopup } from './parts/MenuPopup/MenuPopup'
 
 export interface IMenuItem {
@@ -10,7 +10,7 @@ export interface IMenuItem {
     url: string
 }
 
-const items: IMenuItem[] = [
+const menuItems: IMenuItem[] = [
     { _id: '1', title: 'Home', url: '/' },
     { _id: '2', title: 'Project Index', url: '/project' },
     { _id: '3', title: 'Info', url: '/info' },
@@ -19,19 +19,41 @@ const items: IMenuItem[] = [
 export function Menu() {
     const [isOpen, setIsOpen] = useState<boolean>(false)
 
-    function onToggleMenu() {
+    function toggleMenu() {
         setIsOpen(prev => !prev)
     }
 
     return (
         <>
-            <button onClick={onToggleMenu} data-hover={true} className='menu'>
-                <BiMenuAltRight />
-                <Text size='small' display='inline'>
-                    Menu
-                </Text>
+            <button onClick={toggleMenu} data-hover={true} className='menu'>
+                <AnimatePresence>
+                    {isOpen ? (
+                        <motion.span
+                            key='close'
+                            animate={{ opacity: 1 }}
+                            exit={{ opacity: 0 }}
+                            transition={{ duration: 0.2 }}
+                            className='menu-btn'
+                        >
+                            Close
+                        </motion.span>
+                    ) : (
+                        <motion.span
+                            key='menu'
+                            animate={{ opacity: 1 }}
+                            exit={{ opacity: 0 }}
+                            transition={{ duration: 0.2 }}
+                            className='menu-btn'
+                        >
+                            <BiMenuAltRight />
+                            Menu
+                        </motion.span>
+                    )}
+                </AnimatePresence>
             </button>
-            {isOpen ? <MenuPopup menuItems={items} onToggleMenu={onToggleMenu} /> : null}
+            <AnimatePresence>
+                {isOpen ? <MenuPopup isOpen={isOpen} menuItems={menuItems} onToggleMenu={toggleMenu} /> : null}
+            </AnimatePresence>
         </>
     )
 }
