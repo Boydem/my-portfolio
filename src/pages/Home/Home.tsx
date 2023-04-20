@@ -9,14 +9,26 @@ export interface IGalleryImage {
     imgURL: string
 }
 
+const containerVatiants = {
+    hidden: {
+        opacity: 0,
+        transition: { delay: 0.25, duration: 0.5, ease: 'easeInOut' },
+    },
+    visible: {
+        opacity: 1,
+        transition: { delay: 0.25, duration: 0.5, ease: 'easeInOut' },
+    },
+}
+
 export function Home() {
     const [galleryImages, setGalleryImages] = useState<IGalleryImage[] | []>([])
 
     return (
         <motion.section
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.75, ease: 'easeInOut' }}
+            variants={containerVatiants}
+            initial={'hidden'}
+            animate={'visible'}
+            exit={'hidden'}
             className='home'
         >
             <motion.header

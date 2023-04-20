@@ -2,6 +2,7 @@ import { IGalleryImage } from '../../Home'
 import { useState, useRef, useEffect } from 'react'
 import { useMouseMove } from '../../../../hooks/useMouseMove'
 import { motion } from 'framer-motion'
+import { Link } from 'react-router-dom'
 interface Props {
     items: IGalleryImage[]
 }
@@ -10,6 +11,7 @@ export function Gallery({ items }: Props) {
     const [translateX, setTranslateX] = useState<number>(0)
     const contentRef = useRef<HTMLDivElement>(null)
     const innerRef = useRef<HTMLDivElement>(null)
+
     function handleGalleryMove(clientX: number) {
         const shouldHandleGalleryMove = contentRef.current && innerRef.current
         if (!shouldHandleGalleryMove) return
@@ -27,7 +29,9 @@ export function Gallery({ items }: Props) {
             setTranslateX(-percent * totalDistance)
         }
     }
+
     const mousePos = useMouseMove()
+
     useEffect(() => {
         handleGalleryMove(mousePos.x)
     }, [mousePos.x])
@@ -48,7 +52,9 @@ export function Gallery({ items }: Props) {
                     {items && items.length
                         ? items.map(item => (
                               <div data-link-hover={true} className='item-container' key={item._id}>
-                                  <img src={item.imgURL} alt='project' />
+                                  <Link to={`/project/${item._id}`}>
+                                      <img src={item.imgURL} alt='project' />
+                                  </Link>
                               </div>
                           ))
                         : Array(5)

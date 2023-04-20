@@ -16,6 +16,7 @@ export function MenuItems({ menuItems, onToggleMenu }: Props) {
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ duration: 0.6, ease: 'easeInOut', delay: index === 0 ? 0.2 : index * 0.2 + 0.2 }}
+                    key={index}
                 >
                     <NavLink data-hover={true} to={`${item.url}`} className='menu-link' key={item._id}>
                         <Text display='inline' size='medium'>

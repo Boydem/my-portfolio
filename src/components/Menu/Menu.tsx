@@ -26,33 +26,21 @@ export function Menu() {
     return (
         <>
             <button onClick={toggleMenu} data-hover={true} className='menu'>
-                <AnimatePresence>
-                    {isOpen ? (
-                        <motion.span
-                            key='close'
-                            animate={{ opacity: 1 }}
-                            exit={{ opacity: 0 }}
-                            transition={{ duration: 0.2 }}
-                            className='menu-btn'
-                        >
-                            Close
-                        </motion.span>
-                    ) : (
-                        <motion.span
-                            key='menu'
-                            animate={{ opacity: 1 }}
-                            exit={{ opacity: 0 }}
-                            transition={{ duration: 0.2 }}
-                            className='menu-btn'
-                        >
-                            <BiMenuAltRight />
-                            Menu
-                        </motion.span>
-                    )}
+                <AnimatePresence mode='wait'>
+                    <motion.span
+                        key={`${isOpen ? 'close' : 'menu'}`}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
+                        transition={{ duration: 0.2 }}
+                        className='menu-btn'
+                    >
+                        {isOpen ? 'Close' : 'Menu'}
+                        {isOpen ? null : <BiMenuAltRight />}
+                    </motion.span>
                 </AnimatePresence>
             </button>
             <AnimatePresence>
-                {isOpen ? <MenuPopup isOpen={isOpen} menuItems={menuItems} onToggleMenu={toggleMenu} /> : null}
+                {isOpen ? <MenuPopup menuItems={menuItems} onToggleMenu={toggleMenu} /> : null}
             </AnimatePresence>
         </>
     )

@@ -1,5 +1,4 @@
 import { ReactNode } from 'react'
-import { motion } from 'framer-motion'
 
 type TextTypes = 'regular' | 'title' | 'muted'
 type TextSizes = 'small' | 'medium' | 'large'
@@ -25,4 +24,3 @@ export function Text({ children, type = 'regular', size = 'small', display = 'bl
         </p>
     )
 }
-export const MotionText = motion(Text)

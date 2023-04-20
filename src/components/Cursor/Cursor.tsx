@@ -30,7 +30,9 @@ export function Cursor() {
         <div
             className={`cursor ${isHover ? 'hover' : ''} ${isLinkHover ? 'link-hover' : ''}`}
             style={{
-                transform: `translate3d(${mousePos.x}px,${mousePos.y}px,0px) scale(${
+                transform: `translate3d(${
+                    window.innerWidth > mousePos.x + 20 ? mousePos.x : window.innerWidth - 20
+                }px,${window.innerHeight > mousePos.y + 20 ? mousePos.y : window.innerHeight - 20}px,0px) scale(${
                     isHover || isLinkHover ? 2.25 : 1
                 })`,
             }}

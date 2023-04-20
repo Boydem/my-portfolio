@@ -7,7 +7,6 @@ import { Text } from '../../../Text/Text'
 interface Props {
     menuItems: IMenuItem[]
     onToggleMenu: () => void
-    isOpen: boolean
 }
 const motionEffect = {
     initial: { opacity: 0 },
@@ -15,7 +14,7 @@ const motionEffect = {
     exit: { opacity: 0 },
     transition: { duration: 0.25, ease: 'easeInOut' },
 }
-export function MenuPopup({ isOpen, menuItems, onToggleMenu }: Props) {
+export function MenuPopup({ menuItems, onToggleMenu }: Props) {
     return (
         <motion.section {...motionEffect} className='menu-popup layout-padding-inline layout-padding-block'>
             <Logo onToggleMenu={onToggleMenu} size='small' />
