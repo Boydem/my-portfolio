@@ -1,5 +1,6 @@
 import { useCallback, useEffect, useState } from 'react'
 import { useMouseMove } from '../../hooks/useMouseMove'
+import { BsPlus } from 'react-icons/bs'
 
 export function Cursor() {
     // const [mousePos, setMousePos] = useState<{ x: number; y: number }>({ x: 0, y: 0 })
@@ -11,32 +12,29 @@ export function Cursor() {
         (target: HTMLElement) => {
             // Check if the target or any of its parents have the data-hover attribute
             const parentWithDataHover = target ? target.closest('[data-hover="true"]') : null
-
-            // Only update the hover state if the target has changed or the data-hover attribute has changed
             if (lastHoveredTarget !== parentWithDataHover) {
-                setLastHoveredTarget(parentWithDataHover)
                 setIsHover(!!parentWithDataHover)
             }
 
             // Check if the target or any of its parents have the data-link-hover attribute
             const parentWithDataLinkHover = target ? target.closest('[data-link-hover="true"]') : null
-
-            // Only update the link hover state if the target has changed or the data-link-hover attribute has changed
             if (lastHoveredTarget !== parentWithDataLinkHover) {
-                setLastHoveredTarget(parentWithDataLinkHover)
                 setIsLinkHover(!!parentWithDataLinkHover)
             }
+            setLastHoveredTarget(parentWithDataHover || parentWithDataLinkHover || null)
         },
         [lastHoveredTarget]
     )
     const mousePos = useMouseMove(handleHoverEffects)
-
+    console.log('lastHoveredTarget , isHover , isLinkHover:', lastHoveredTarget, isHover, isLinkHover)
     return (
         <div
             className={`cursor ${isHover ? 'hover' : ''} ${isLinkHover ? 'link-hover' : ''}`}
             style={{
                 transform: `translate3d(${mousePos.x}px,${mousePos.y}px,0px) scale(${isHover || isLinkHover ? 3 : 1})`,
             }}
-        ></div>
+        >
+            {isLinkHover ? <BsPlus color='var(--c-bg)' /> : null}
+        </div>
     )
 }

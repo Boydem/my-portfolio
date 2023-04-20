@@ -14,6 +14,8 @@
     background-color: $c-text;
     pointer-events: none;
     transition: transform 0.1s, opacity 0.2s ease-in-out;
+    font-size: 0.5rem;
+    line-height: 1;
     &.hover {
         transition: transform 0.1s, opacity 0.2s ease-in-out;
         opacity: 0.5;
