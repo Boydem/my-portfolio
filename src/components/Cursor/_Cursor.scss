@@ -1,3 +1,9 @@
+@property --transform-scale {
+    syntax: '<number>{2}';
+    initial-value: 1 1;
+    inherits: false;
+}
+
 .cursor {
     position: absolute;
     top: 0;
@@ -6,10 +12,10 @@
     height: 0.5rem;
     border-radius: 100px;
     background-color: $c-text;
-    transition: transform 0.1s linear;
     pointer-events: none;
+    transition: transform 0.1s;
     &.hover {
-        transform: scale(2);
+        transition: transform 0.1s;
         opacity: 0.5;
     }
 }

@@ -35,6 +35,12 @@ export function Cursor() {
         <div
             className={`cursor ${isHover ? 'hover' : ''}`}
             style={{ transform: `translate3d(${mousePos.x}px,${mousePos.y}px,0px) scale(${isHover ? 3 : 1})` }}
+            // style={{
+            //     transition: 'top 0.1s linear, left 0.1s linear,transform 0.13s ease-in-out',
+            //     top: `${mousePos.y}px`,
+            //     left: `${mousePos.x}px`,
+            //     transform: `scale(${isHover ? 3 : 1})`,
+            // }}
         ></div>
     )
 }

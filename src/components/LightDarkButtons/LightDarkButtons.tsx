@@ -18,13 +18,18 @@ export function LightDarkButtons() {
     return (
         <section className='light-dark-buttons'>
             <button
+                data-hover={true}
                 className={`light-btn ${currentMode === 'light' ? 'active' : ''}`}
                 onClick={() => onToggle('light')}
             >
                 Light
             </button>
             <span> | </span>
-            <button className={`dark-btn ${currentMode === 'dark' ? 'active' : ''}`} onClick={() => onToggle('dark')}>
+            <button
+                data-hover={true}
+                className={`dark-btn ${currentMode === 'dark' ? 'active' : ''}`}
+                onClick={() => onToggle('dark')}
+            >
                 Dark
             </button>
         </section>

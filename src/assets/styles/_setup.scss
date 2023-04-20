@@ -18,7 +18,6 @@ body {
     line-height: $base-line-hight;
     -webkit-font-smoothing: antialiased;
 }
-a:hover {
-    cursor: none;
-    color: red;
+*[data-hover='true']:hover {
+    cursor: none !important;
 }
