@@ -21,7 +21,7 @@ const containerVatiants = {
 }
 
 export function Home() {
-    const [galleryImages, setGalleryImages] = useState<IGalleryImage[] | []>([])
+    // const [galleryImages, setGalleryImages] = useState<IGalleryImage[] | []>([])
 
     return (
         <motion.section
