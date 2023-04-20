@@ -9,7 +9,7 @@
         height: 100%;
         overflow: hidden;
         .contnet {
-            transition: all 0.35s linear;
+            transition: all 0.1s linear;
             position: relative;
             height: 100%;
             overflow: hidden;
@@ -17,10 +17,22 @@
         }
     }
     .item-container {
-        @include aspect-ratio(400, 200);
-        min-height: 200px;
-        min-width: 300px;
+        min-width: 720px;
         border: 1px solid $c-text;
+        filter: saturate(0) brightness(0.8);
+        transition-property: filter;
+        transition-duration: 0.6s;
+        transition-timing-function: cubic-bezier(0.3, 0.1, 0.1, 1);
+        // @include aspect-ratio(16, 9);
+        display: flex;
+        img {
+            width: 100%;
+            object-fit: cover;
+        }
+        &:hover {
+            filter: none;
+            transition-duration: 0.3s;
+        }
         &:not(:first-child) {
             margin-inline-start: 10px;
         }

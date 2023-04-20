@@ -11,6 +11,10 @@
         width: 100%;
     }
     .header {
+        top: calc(27% - 10px);
+        z-index: 99;
+        transform: translateY(-100%);
+        position: absolute;
         margin-bottom: 1rem;
     }
 }

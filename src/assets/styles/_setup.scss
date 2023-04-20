@@ -4,7 +4,10 @@ body {
     color: $c-text;
     background-color: $c-bg;
     transition: color 0.2s, background-color 0.2s;
+    // Disable default cusor pointer
+    cursor: none;
 }
+
 //
 html,
 body {
@@ -14,4 +17,8 @@ body {
     font-size: $text-medium;
     line-height: $base-line-hight;
     -webkit-font-smoothing: antialiased;
+}
+a:hover {
+    cursor: none;
+    color: red;
 }

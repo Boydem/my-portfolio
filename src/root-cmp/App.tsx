@@ -4,6 +4,7 @@ import { Home } from '../pages/Home/Home'
 import { Menu } from '../components/Menu/Menu'
 import { ProjectIndex } from '../pages/ProjectIndex/ProjectIndex'
 import { ProjectDetails } from '../pages/ProjectDetails/ProjectDetails'
+import { Cursor } from '../components/Cursor/Cursor'
 
 function App() {
     return (
@@ -15,6 +16,7 @@ function App() {
                 <Route path='/info' element={<ProjectDetails />} />
             </Routes>
             <Menu />
+            <Cursor />
         </div>
     )
 }

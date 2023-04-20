@@ -1,0 +1,15 @@
+.cursor {
+    position: absolute;
+    top: 0;
+    left: 0%;
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 100px;
+    background-color: $c-text;
+    transition: transform 0.1s linear;
+    pointer-events: none;
+    &.hover {
+        transform: scale(2);
+        opacity: 0.5;
+    }
+}
