@@ -18,13 +18,11 @@ export function ProjectDetails() {
     const innerRef = useRef<HTMLElement | null>(null)
     const [scrollX, setScrollX] = useState(0)
 
-    function handleScroll(ev: React.WheelEvent<HTMLDivElement>) {
+    function handleWheel(ev: React.WheelEvent<HTMLDivElement>) {
         if (!innerRef.current) return
         const { deltaY } = ev
-        console.log('scrollX:', scrollX)
-        const movementAmount = 50
-        const end = (innerRef.current.scrollWidth - window.innerWidth - movementAmount) * -1
-        console.log('end:', end)
+        const movementAmount = 75
+        const end = (innerRef.current.scrollWidth - window.innerWidth) * -1
         if (deltaY > 0 && scrollX >= end) {
             setScrollX(prevX => prevX - movementAmount)
         } else if (deltaY < 0 && scrollX < 0) {
@@ -39,7 +37,7 @@ export function ProjectDetails() {
             animate={'visible'}
             exit={'hidden'}
             className='project-details disable-scrollbar'
-            onWheel={handleScroll}
+            onWheel={handleWheel}
         >
             <section
                 ref={innerRef}
