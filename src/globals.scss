@@ -12,7 +12,8 @@
 @import './components/LightDarkButtons/LightDarkButtons';
 @import './components/Logo/Logo';
 @import './components/Menu/Menu';
-@import './components/MenuItems/MenuItems';
+@import './components/Menu/parts/MenuItems/MenuItems';
+@import './components/Menu/parts/MenuPopup/MenuPopup';
 @import './components/Text/Text';
 @import './components/Cursor/Cursor';
 

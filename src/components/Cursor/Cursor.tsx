@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useState } from 'react'
+import { useCallback, useState } from 'react'
 import { useMouseMove } from '../../hooks/useMouseMove'
 import { BsPlus } from 'react-icons/bs'
 
@@ -26,12 +26,13 @@ export function Cursor() {
         [lastHoveredTarget]
     )
     const mousePos = useMouseMove(handleHoverEffects)
-    console.log('lastHoveredTarget , isHover , isLinkHover:', lastHoveredTarget, isHover, isLinkHover)
     return (
         <div
             className={`cursor ${isHover ? 'hover' : ''} ${isLinkHover ? 'link-hover' : ''}`}
             style={{
-                transform: `translate3d(${mousePos.x}px,${mousePos.y}px,0px) scale(${isHover || isLinkHover ? 3 : 1})`,
+                transform: `translate3d(${mousePos.x}px,${mousePos.y}px,0px) scale(${
+                    isHover || isLinkHover ? 2.25 : 1
+                })`,
             }}
         >
             {isLinkHover ? <BsPlus color='var(--c-bg)' /> : null}

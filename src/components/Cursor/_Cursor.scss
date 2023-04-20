@@ -1,10 +1,5 @@
-@property --transform-scale {
-    syntax: '<number>{2}';
-    initial-value: 1 1;
-    inherits: false;
-}
-
 .cursor {
+    z-index: 99999999;
     position: absolute;
     top: 0;
     left: 0;
@@ -17,11 +12,17 @@
     font-size: 0.5rem;
     line-height: 1;
     &.hover {
-        transition: transform 0.1s, opacity 0.2s ease-in-out;
+        transition: transform 0.1s, opacity 0.2s ease-in-out, background-color 0.2s ease-in-out,
+            opacity 0.2s ease-in-out;
+        background-color: #ffffff00;
+        border: 1px solid $c-text;
         opacity: 0.5;
     }
     &.link-hover {
         transition: transform 0.1s, opacity 0.2s ease-in-out;
         opacity: 1;
+        svg {
+            pointer-events: none;
+        }
     }
 }

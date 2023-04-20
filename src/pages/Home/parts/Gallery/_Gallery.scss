@@ -3,13 +3,14 @@
     align-self: flex-start;
     margin-bottom: 1rem;
     height: 36%;
-    padding-inline: $layout-padding-lg;
     .inner {
         position: relative;
         height: 100%;
         overflow: hidden;
+        border-right: 1px solid $c-text;
+        border-left: 1px solid $c-text;
         .contnet {
-            transition: all 0.1s linear;
+            transition: transform 1s cubic-bezier(0.22, 1, 0.22, 1);
             position: relative;
             height: 100%;
             overflow: hidden;
@@ -23,7 +24,6 @@
         transition-property: filter;
         transition-duration: 0.6s;
         transition-timing-function: cubic-bezier(0.3, 0.1, 0.1, 1);
-        // @include aspect-ratio(16, 9);
         display: flex;
         img {
             width: 100%;

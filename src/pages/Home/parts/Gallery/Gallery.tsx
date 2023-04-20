@@ -1,7 +1,7 @@
 import { IGalleryImage } from '../../Home'
-import { useLayoutEffect, useState, useRef, useEffect } from 'react'
-import { utilService } from '../../../../services/util.service'
+import { useState, useRef, useEffect } from 'react'
 import { useMouseMove } from '../../../../hooks/useMouseMove'
+import { motion } from 'framer-motion'
 interface Props {
     items: IGalleryImage[]
 }
@@ -33,7 +33,12 @@ export function Gallery({ items }: Props) {
     }, [mousePos.x])
 
     return (
-        <section className='gallery disable-scrollbar'>
+        <motion.section
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.5, ease: 'easeInOut', delay: 0.5 }}
+            className='gallery layout-padding disable-scrollbar'
+        >
             <div ref={innerRef} className='inner'>
                 <div
                     ref={contentRef}
@@ -55,6 +60,6 @@ export function Gallery({ items }: Props) {
                               ))}
                 </div>
             </div>
-        </section>
+        </motion.section>
     )
 }

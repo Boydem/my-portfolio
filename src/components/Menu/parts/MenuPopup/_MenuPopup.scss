@@ -1,0 +1,9 @@
+.menu-popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    width: 100vw;
+    height: 100vh;
+    background-color: $c-bg;
+}
