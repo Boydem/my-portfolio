@@ -1,9 +1,12 @@
-.logo {
-    line-height: 0.8125;
+.logo,
+.logo > a {
+    max-width: max-content;
+    line-height: 0.75;
     text-transform: uppercase;
     font-feature-settings: 'palt';
     display: flex;
     flex-direction: column;
+    letter-spacing: -1px;
     > span {
         width: 100%;
     }

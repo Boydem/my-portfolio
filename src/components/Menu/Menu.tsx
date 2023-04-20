@@ -31,7 +31,7 @@ export function Menu() {
                     Menu
                 </Text>
             </button>
-            {isOpen ? <MenuPopup menuItems={items} /> : null}
+            {isOpen ? <MenuPopup menuItems={items} onToggleMenu={onToggleMenu} /> : null}
         </>
     )
 }

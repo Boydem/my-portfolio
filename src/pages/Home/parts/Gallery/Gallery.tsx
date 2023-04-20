@@ -37,7 +37,7 @@ export function Gallery({ items }: Props) {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5, ease: 'easeInOut', delay: 0.5 }}
-            className='gallery layout-padding disable-scrollbar'
+            className='gallery layout-padding-inline disable-scrollbar'
         >
             <div ref={innerRef} className='inner'>
                 <div

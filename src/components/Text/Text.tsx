@@ -9,7 +9,7 @@ interface Props {
     size?: TextSizes
     display?: TextDisplays
 }
-export function Text({ children, type = 'regular', size = 'medium', display = 'block' }: Props) {
+export function Text({ children, type = 'regular', size = 'small', display = 'block' }: Props) {
     return (
         <p
             style={display === 'block' ? { width: '100%' } : { width: 'max-content' }}

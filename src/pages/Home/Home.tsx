@@ -23,7 +23,7 @@ export function Home() {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.55, ease: 'easeInOut' }}
-                className='header flex justify-between align-end'
+                className='header layout-padding-inline-xl flex justify-between align-end'
             >
                 <Logo size={'large'} />
                 <LightDarkButtons />
@@ -33,7 +33,7 @@ export function Home() {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.5, ease: 'easeInOut', delay: 0.5 }}
-                className='outro'
+                className='outro layout-padding-inline-xl'
             >
                 <Text>
                     Frontend developer <br /> based in Tel Aviv.

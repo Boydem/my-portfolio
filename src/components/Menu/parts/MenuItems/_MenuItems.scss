@@ -1,0 +1,26 @@
+.menu-link {
+    display: inline-block;
+    text-transform: uppercase;
+    letter-spacing: -2.5px;
+    transition: all 0.2s;
+    opacity: 1;
+    position: relative;
+    &::before {
+        content: '';
+        position: absolute;
+        top: 5px;
+        left: 0;
+        width: 0%;
+        height: 1px;
+        background-color: $c-text;
+        transition: all 0.2s;
+    }
+    &:hover {
+        &::before {
+            width: 100%;
+        }
+        opacity: 1;
+        // filter: drop-shadow(-5px 0px 20px red);
+        letter-spacing: 0px;
+    }
+}
