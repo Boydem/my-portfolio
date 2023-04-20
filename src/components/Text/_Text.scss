@@ -1,13 +1,14 @@
 .text {
+    transition: color 0.2s;
     &.type-regular {
-        color: $text-color;
+        color: $c-text;
     }
     &.type-title {
         font-size: $text-large;
-        color: $text-color;
+        color: $c-text;
     }
     &.type-muted {
-        color: gray;
+        color: $c-muted;
     }
     &.size-small {
         font-size: $text-small;

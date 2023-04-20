@@ -1,9 +1,12 @@
 .light-dark-buttons {
     .light-btn,
     .dark-btn {
-        padding-inline: 1rem;
+        all: unset;
+        text-transform: uppercase;
+        cursor: pointer;
+        padding-inline: 0.25rem;
         opacity: 0.7;
-        .active {
+        &.active {
             opacity: 1;
         }
     }

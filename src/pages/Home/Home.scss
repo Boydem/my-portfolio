@@ -1,3 +1,16 @@
 @import './parts/Gallery/Gallery';
 .home {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    .header,
+    .outro {
+        padding-inline: 6rem;
+        width: 100%;
+    }
+    .header {
+        margin-bottom: 1rem;
+    }
 }

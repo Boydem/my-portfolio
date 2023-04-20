@@ -2,24 +2,26 @@
 }
 // Dark/Light mode vars
 html[data-theme='light'] {
-    --text-color: #1b1b1b;
-    --muted-color: #464646;
-    --highlight-color: #000000;
-    --bg-color: #f2f2f2;
+    --c-text: #1b1b1b;
+    --c-bg: #f2f2f2;
+    --c-muted: #464646;
+    --c-highlight: #000;
 }
 html {
-    --text-color: #f2f2f2;
-    --muted-color: #464646;
-    --highlight-color: #ffffff;
-    --bg-color: #000;
+    --c-text: #f2f2f2;
+    --c-bg: #000;
+    --c-muted: #464646;
+    --c-highlight: #ffffff;
 }
 // Colors
-$text-color: var(--text-color);
-$bg-color: var(--bg-color);
+$c-text: var(--c-text);
+$c-bg: var(--c-bg);
+$c-muted: var(--c-muted);
+$c-highlight: var(--c-highlight);
 
 // Text Sizes
 $text-small: 24px;
-$text-medium: 36px;
+$text-medium: 28px;
 $text-large: 70px;
 
 // Fonts

@@ -23,7 +23,7 @@ export function LightDarkButtons() {
             >
                 Light
             </button>
-            <span> / </span>
+            <span> | </span>
             <button className={`dark-btn ${currentMode === 'dark' ? 'active' : ''}`} onClick={() => onToggle('dark')}>
                 Dark
             </button>

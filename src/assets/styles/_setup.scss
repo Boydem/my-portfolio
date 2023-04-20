@@ -1,7 +1,8 @@
 // Dark/Light Mode
-html {
-    color: $text-color;
-    background-color: $bg-color;
+html,
+body {
+    color: $c-text;
+    background-color: $c-bg;
     transition: color 0.2s, background-color 0.2s;
 }
 //

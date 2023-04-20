@@ -1,0 +1,11 @@
+.menu {
+    all: unset;
+    position: fixed;
+    bottom: $layout-padding-lg;
+    left: $layout-padding-lg;
+    text-transform: uppercase;
+    transform: rotate(-90deg) translateY(-100%);
+    display: flex;
+    font-size: 0.75rem;
+    line-height: 1;
+}

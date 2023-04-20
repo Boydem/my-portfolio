@@ -1,3 +1,11 @@
+import { BiMenuAltRight } from 'react-icons/bi'
+import { Text } from '../Text/Text'
+
 export function Menu() {
-    return <section className='menu'>Hello from Menu</section>
+    return (
+        <button className='menu'>
+            <BiMenuAltRight />
+            Menu
+        </button>
+    )
 }
