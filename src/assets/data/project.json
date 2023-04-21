@@ -1,0 +1,98 @@
+[
+    {
+        "_id": "quix",
+        "title": "Editor quix",
+        "desc": "Lorem Ipsum",
+        "stack": [
+            "Lorem Ipsum",
+            "Lorem Ipsum",
+            "Lorem Ipsum"
+        ],
+        "repoURL": "https://github.com/Boydem/quix-frontend",
+        "url": "https://editorquix.com",
+        "imgsURL": [
+            "https://res.cloudinary.com/dsperrtyj/image/upload/v1682065194/editor-quix-min_c1shur.png"
+        ],
+        "createdAt": 12345678
+    },
+    {
+        "_id": "airbnb",
+        "title": "Airbnb clone",
+        "desc": "Lorem Ipsum",
+        "stack": [
+            "Lorem Ipsum",
+            "Lorem Ipsum",
+            "Lorem Ipsum"
+        ],
+        "repoURL": "https://github.com/Boydem/airbnb-frontend",
+        "url": "https://airbnb-frontend-y5qm.onrender.com/",
+        "imgsURL": [
+            "https://res.cloudinary.com/dsperrtyj/image/upload/v1681950443/airbnb-min_oyagte.png"
+        ],
+        "createdAt": 12345678
+    },
+    {
+        "_id": "simon",
+        "title": "Simon says",
+        "desc": "Lorem Ipsum",
+        "stack": [
+            "Lorem Ipsum",
+            "Lorem Ipsum",
+            "Lorem Ipsum"
+        ],
+        "repoURL": "https://github.com/Boydem/simon-says",
+        "url": "https://boydem.github.io/simon-frontend/",
+        "imgsURL": [
+            "https://res.cloudinary.com/dsperrtyj/image/upload/v1681950441/simon-says-min_bt33gb.png"
+        ],
+        "createdAt": 12345678
+    },
+    {
+        "_id": "meme",
+        "title": "Memozaurus - Meme Generator",
+        "desc": "Lorem Ipsum",
+        "stack": [
+            "Lorem Ipsum",
+            "Lorem Ipsum",
+            "Lorem Ipsum"
+        ],
+        "repoURL": "https://github.com/Boydem/Meme-Generator",
+        "url": "https://boydem.github.io/Meme-Generator/",
+        "imgsURL": [
+            "https://res.cloudinary.com/dsperrtyj/image/upload/v1681951219/meme-generator-min_pnlnxo.png"
+        ],
+        "createdAt": 12345678
+    },
+    {
+        "_id": "minesweeper",
+        "title": "Minesweeper",
+        "desc": "Lorem Ipsum",
+        "stack": [
+            "Lorem Ipsum",
+            "Lorem Ipsum",
+            "Lorem Ipsum"
+        ],
+        "repoURL": "https://github.com/Boydem/minesweeper",
+        "url": "https://boydem.github.io/minesweeper/",
+        "imgsURL": [
+            "https://res.cloudinary.com/dsperrtyj/image/upload/v1681951217/minesweeper-min_ty9qyk.png"
+        ],
+        "createdAt": 12345678
+    },
+    {
+        "_id": "bitcoin",
+        "title": "Bitcoin app",
+        "desc": "Lorem Ipsum",
+        "stack": [
+            "Lorem Ipsum",
+            "Lorem Ipsum",
+            "Lorem Ipsum"
+        ],
+        "repoURL": "https://github.com/Boydem/Angular-MisterBitcoin",
+        "url": "https://boydem.github.io/Angular-MisterBitcoin/#/",
+        "imgsURL": [
+            "https://camo.githubusercontent.com/53caac657115d07d361c7ee75db2b94890d5cb4f5b7f1c731b4ad1cfd30c189a/68747470733a2f2f7265732e636c6f7564696e6172792e636f6d2f64737065727274796a2f696d6167652f75706c6f61642f76313637373134353837302f626974636f696e2d686f6d655f61737566666a2e706e67"
+        ],
+        "createdAt": 12345678
+    }
+]

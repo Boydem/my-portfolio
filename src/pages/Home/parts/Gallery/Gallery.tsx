@@ -1,10 +1,10 @@
-import { IGalleryImage } from '../../Home'
+import { IProject } from '../../Home'
 import { useState, useRef, useEffect } from 'react'
 import { useMouseMove } from '../../../../hooks/useMouseMove'
 import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
 interface Props {
-    items: IGalleryImage[]
+    items: IProject[]
 }
 
 export function Gallery({ items }: Props) {
@@ -53,7 +53,7 @@ export function Gallery({ items }: Props) {
                         ? items.map(item => (
                               <div data-link-hover={true} className='item-container' key={item._id}>
                                   <Link to={`/project/${item._id}`}>
-                                      <img src={item.imgURL} alt='project' />
+                                      <img src={item.imgsURL[0]} alt={item.title} />
                                   </Link>
                               </div>
                           ))

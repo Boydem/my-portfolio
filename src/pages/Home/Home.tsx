@@ -1,12 +1,19 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { LightDarkButtons } from '../../components/LightDarkButtons/LightDarkButtons'
 import { Logo } from '../../components/Logo/Logo'
 import { Text } from '../../components/Text/Text'
 import { Gallery } from './parts/Gallery/Gallery'
 import { motion } from 'framer-motion'
-export interface IGalleryImage {
+import { projectsService } from '../../services/project.service'
+export interface IProject {
     _id: string
-    imgURL: string
+    title: string
+    desc: string
+    repoURL: string
+    url: string
+    stack: string[]
+    imgsURL: string[]
+    createdAt: number
 }
 
 const containerVatiants = {
@@ -21,7 +28,20 @@ const containerVatiants = {
 }
 
 export function Home() {
-    // const [galleryImages, setGalleryImages] = useState<IGalleryImage[] | []>([])
+    const [projects, setProjects] = useState<IProject[]>([])
+
+    useEffect(() => {
+        getProjects()
+    }, [])
+
+    const getProjects = async () => {
+        try {
+            const data = await projectsService.loadProjects()
+            setProjects(data)
+        } catch (err) {
+            console.log('err:', err)
+        }
+    }
 
     return (
         <motion.section
@@ -40,7 +60,7 @@ export function Home() {
                 <Logo size={'large'} />
                 <LightDarkButtons />
             </motion.header>
-            <Gallery items={items} />
+            <Gallery items={projects} />
             <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
