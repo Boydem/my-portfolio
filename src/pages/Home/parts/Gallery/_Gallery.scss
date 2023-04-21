@@ -19,20 +19,12 @@
     }
     .item-container {
         min-width: 720px;
-        border: 1px solid $c-text;
-        filter: saturate(0) brightness(0.8);
-        transition-property: filter;
-        transition-duration: 0.6s;
-        transition-timing-function: cubic-bezier(0.3, 0.1, 0.1, 1);
         display: flex;
         img {
             width: 100%;
             object-fit: cover;
         }
-        &:hover {
-            filter: none;
-            transition-duration: 0.3s;
-        }
+
         &:not(:first-child) {
             margin-inline-start: 10px;
         }

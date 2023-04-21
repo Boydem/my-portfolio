@@ -5,16 +5,7 @@ import { Text } from '../../components/Text/Text'
 import { Gallery } from './parts/Gallery/Gallery'
 import { motion } from 'framer-motion'
 import { projectsService } from '../../services/project.service'
-export interface IProject {
-    _id: string
-    title: string
-    desc: string
-    repoURL: string
-    url: string
-    stack: string[]
-    imgsURL: string[]
-    createdAt: number
-}
+import { IProject } from '../../models/project'
 
 const containerVatiants = {
     hidden: {

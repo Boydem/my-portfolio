@@ -3,8 +3,9 @@ import { Text } from '../../components/Text/Text'
 import { Link, useNavigate, useParams } from 'react-router-dom'
 import { BsDash } from 'react-icons/bs'
 import { useEffect, useRef, useState } from 'react'
-import { IProject } from '../Home/Home'
 import { projectsService } from '../../services/project.service'
+import { IProjectWithNext } from '../../models/project'
+import { InnerContent } from './parts/InnerContent/InnerContent'
 const containerVatiants = {
     hidden: {
         opacity: 0,
@@ -18,7 +19,7 @@ const containerVatiants = {
 
 export function ProjectDetails() {
     // Component data
-    const [project, setProject] = useState<IProject | undefined>()
+    const [project, setProject] = useState<IProjectWithNext | undefined>()
     const { projectId } = useParams()
     const navigate = useNavigate()
     useEffect(() => {
@@ -30,12 +31,12 @@ export function ProjectDetails() {
     const getProject = async (projId: string) => {
         try {
             const data = await projectsService.getProjectById(projId)
+            console.log('data:', data)
             setProject(data)
         } catch (err) {
             console.log('err:', err)
         }
     }
-    console.log('project:', project)
     // Component Scroll functionality
     const innerRef = useRef<HTMLElement | null>(null)
     const [scrollX, setScrollX] = useState(0)
@@ -66,24 +67,7 @@ export function ProjectDetails() {
                 style={{ transform: `translate3d(${scrollX}px,0px,0px)` }}
                 className='inner layout-padding-inline'
             >
-                {project ? (
-                    <>
-                        <div className='header'>
-                            <Link data-hover={true} to={'/project'} className='back-btn'>
-                                <BsDash />
-                                Back To Index
-                            </Link>
-                            <Text size='medium'>Lorem Ipsum</Text>
-                            <Text>Lorem Ipsum dolor sit amet</Text>
-                        </div>
-                        <section className='images'>
-                            <div className='img-container'>
-                                <img src={project.imgsURL[0]} alt='lorem ipsum' />
-                            </div>
-                        </section>
-                        <section className='footer'></section>
-                    </>
-                ) : null}
+                {project ? <InnerContent project={project} /> : null}
             </section>
         </motion.section>
     )
