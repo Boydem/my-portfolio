@@ -19,7 +19,7 @@ export function MenuItems({ menuItems, onToggleMenu }: Props) {
                     key={index}
                 >
                     <NavLink data-hover={true} to={`${item.url}`} className='menu-link' key={item._id}>
-                        <Text display='inline' size='medium'>
+                        <Text type='title' display='inline' size='medium'>
                             {item.title}
                         </Text>
                     </NavLink>

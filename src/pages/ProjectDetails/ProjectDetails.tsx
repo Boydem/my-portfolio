@@ -44,12 +44,14 @@ export function ProjectDetails() {
     function handleWheel(ev: React.WheelEvent<HTMLDivElement>) {
         if (!innerRef.current) return
         const { deltaY } = ev
-        const movementAmount = 75
-        const end = (innerRef.current.scrollWidth - window.innerWidth - movementAmount) * -1
-        if (deltaY > 0 && scrollX >= end) {
-            setScrollX(prevX => prevX - movementAmount)
+        let movementAmount = 75
+        const end = (innerRef.current.scrollWidth - window.innerWidth) * -1
+        if (deltaY > 0 && scrollX > end) {
+            movementAmount = Math.min(movementAmount, scrollX - end)
+            setScrollX(prevX => Math.max(prevX - movementAmount, end))
         } else if (deltaY < 0 && scrollX < 0) {
-            setScrollX(prevX => prevX + movementAmount)
+            movementAmount = Math.min(movementAmount, -scrollX)
+            setScrollX(prevX => Math.min(prevX + movementAmount, 0))
         }
     }
 
@@ -62,11 +64,7 @@ export function ProjectDetails() {
             className='project-details disable-scrollbar'
             onWheel={handleWheel}
         >
-            <section
-                ref={innerRef}
-                style={{ transform: `translate3d(${scrollX}px,0px,0px)` }}
-                className='inner layout-padding-inline'
-            >
+            <section ref={innerRef} style={{ transform: `translate3d(${scrollX}px,0px,0px)` }} className='inner'>
                 {project ? <InnerContent project={project} /> : null}
             </section>
         </motion.section>

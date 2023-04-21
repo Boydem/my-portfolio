@@ -58,7 +58,7 @@ export function Home() {
                 transition={{ duration: 0.5, ease: 'easeInOut', delay: 0.5 }}
                 className='outro layout-padding-inline-xl'
             >
-                <Text>
+                <Text type='title' size='small'>
                     Frontend developer <br /> based in Tel Aviv.
                 </Text>
             </motion.div>

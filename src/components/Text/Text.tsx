@@ -1,7 +1,7 @@
 import { ReactNode } from 'react'
 
 type TextTypes = 'regular' | 'title' | 'muted'
-type TextSizes = 'small' | 'medium' | 'large'
+type TextSizes = 'xsmall' | 'small' | 'medium' | 'large'
 type TextDisplays = 'block' | 'inline'
 
 interface Props {
@@ -17,7 +17,7 @@ export function Text({ children, type = 'regular', size = 'small', display = 'bl
     return (
         <p
             style={display === 'block' ? { width: '100%' } : { width: 'max-content' }}
-            className={`text type-${type} size-${size} ${classNames}`}
+            className={`text type-${type} size-${size} ${classNames ? classNames : ''}`}
             {...rest}
         >
             {children}

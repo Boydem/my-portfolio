@@ -2,13 +2,18 @@
     transition: color 0.2s;
     &.type-regular {
         color: $c-text;
+        font-family: $font-family-sans;
     }
     &.type-title {
         font-size: $text-large;
+        font-family: $font-family-serif;
         color: $c-text;
     }
     &.type-muted {
         color: $c-muted;
+    }
+    &.size-xsmall {
+        font-size: $text-xsmall;
     }
     &.size-small {
         font-size: $text-small;

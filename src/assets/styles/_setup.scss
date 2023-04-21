@@ -17,6 +17,12 @@ body {
     line-height: $base-line-hight;
     -webkit-font-smoothing: antialiased;
 }
-*[data-hover='true']:hover {
+[data-tooltip] {
+    &:after {
+        font-size: 15px;
+        font-family: $font-family-sans;
+    }
+}
+*:hover {
     cursor: none !important;
 }

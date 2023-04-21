@@ -5,7 +5,15 @@ $layout-padding-sm: 0.5rem;
 $break-large: 1440px;
 $break-medium: 900px;
 $break-small: 640px;
-
+.layout-margin {
+    margin: $layout-padding-sm;
+    @media (min-width: $break-medium) {
+        margin: $layout-padding-md;
+    }
+    @media (min-width: $break-large) {
+        margin: $layout-padding-lg;
+    }
+}
 .layout-padding-inline {
     padding-inline: $layout-padding-sm;
     @media (min-width: $break-medium) {
