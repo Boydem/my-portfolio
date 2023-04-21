@@ -1,8 +1,9 @@
 import { useState, useRef, useEffect } from 'react'
-import { useMouseMove } from '../../../../hooks/useMouseMove'
 import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
 import { IProject } from '../../../../models/project'
+import { useSelector } from 'react-redux'
+import { RootState } from '../../../../store/store'
 interface Props {
     items: IProject[]
 }
@@ -30,7 +31,7 @@ export function Gallery({ items }: Props) {
         }
     }
 
-    const mousePos = useMouseMove()
+    const { mousePos } = useSelector((storeState: RootState) => storeState.systemModule)
 
     useEffect(() => {
         handleGalleryMove(mousePos.x)

@@ -6,4 +6,9 @@
     width: 100vw;
     height: 100vh;
     background-color: $c-bg;
+    .light-dark-buttons {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+    }
 }

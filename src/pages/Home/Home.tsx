@@ -1,11 +1,10 @@
-import { useEffect, useState } from 'react'
 import { LightDarkButtons } from '../../components/LightDarkButtons/LightDarkButtons'
 import { Logo } from '../../components/Logo/Logo'
 import { Text } from '../../components/Text/Text'
 import { Gallery } from './parts/Gallery/Gallery'
 import { motion } from 'framer-motion'
-import { projectsService } from '../../services/project.service'
-import { IProject } from '../../models/project'
+import { useSelector } from 'react-redux'
+import { RootState } from '../../store/store'
 
 const containerVatiants = {
     hidden: {
@@ -19,20 +18,7 @@ const containerVatiants = {
 }
 
 export function Home() {
-    const [projects, setProjects] = useState<IProject[]>([])
-
-    useEffect(() => {
-        getProjects()
-    }, [])
-
-    const getProjects = async () => {
-        try {
-            const data = await projectsService.loadProjects()
-            setProjects(data)
-        } catch (err) {
-            console.log('err:', err)
-        }
-    }
+    const { projects } = useSelector((storeState: RootState) => storeState.projectModule)
 
     return (
         <motion.section

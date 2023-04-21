@@ -1,25 +1,28 @@
 import { useState } from 'react'
+import { useSelector } from 'react-redux'
+import { RootState } from '../../store/store'
+import { setTheme } from '../../store/system.actions'
 
 type Mode = 'dark' | 'light'
 
 export function LightDarkButtons() {
-    const [currentMode, setCurrentMode] = useState<Mode>('dark')
+    const { theme } = useSelector((storeState: RootState) => storeState.systemModule)
 
     function onToggle(mode: Mode) {
-        if (currentMode === mode) return
+        if (theme === mode) return
         if (mode === 'light') {
             document.documentElement.setAttribute('data-theme', 'light')
         } else {
             document.documentElement.setAttribute('data-theme', 'dark')
         }
-        setCurrentMode(mode)
+        setTheme(mode)
     }
 
     return (
-        <section className='light-dark-buttons'>
+        <section className='light-dark-buttons layout-margin'>
             <button
                 data-hover={true}
-                className={`light-btn ${currentMode === 'light' ? 'active' : ''}`}
+                className={`light-btn ${theme === 'light' ? 'active' : ''}`}
                 onClick={() => onToggle('light')}
             >
                 Light
@@ -27,7 +30,7 @@ export function LightDarkButtons() {
             <span> | </span>
             <button
                 data-hover={true}
-                className={`dark-btn ${currentMode === 'dark' ? 'active' : ''}`}
+                className={`dark-btn ${theme === 'dark' ? 'active' : ''}`}
                 onClick={() => onToggle('dark')}
             >
                 Dark

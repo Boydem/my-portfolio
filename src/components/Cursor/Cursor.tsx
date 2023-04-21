@@ -1,9 +1,9 @@
 import { useCallback, useState } from 'react'
-import { useMouseMove } from '../../hooks/useMouseMove'
 import { BsPlus } from 'react-icons/bs'
+import { RootState } from '../../store/store'
+import { useSelector } from 'react-redux'
 
 export function Cursor() {
-    // const [mousePos, setMousePos] = useState<{ x: number; y: number }>({ x: 0, y: 0 })
     const [lastHoveredTarget, setLastHoveredTarget] = useState<Element | null>(null)
     const [isHover, setIsHover] = useState<boolean>(false)
     const [isLinkHover, setIsLinkHover] = useState<boolean>(false)
@@ -25,7 +25,8 @@ export function Cursor() {
         },
         [lastHoveredTarget]
     )
-    const mousePos = useMouseMove(handleHoverEffects)
+    const { mousePos } = useSelector((storeState: RootState) => storeState.systemModule)
+
     return (
         <div
             className={`cursor ${isHover ? 'hover' : ''} ${isLinkHover ? 'link-hover' : ''}`}

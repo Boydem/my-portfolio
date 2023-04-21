@@ -3,6 +3,7 @@ import { MenuItems } from '../MenuItems/MenuItems'
 import { IMenuItem } from '../../Menu'
 import { Logo } from '../../../Logo/Logo'
 import { Text } from '../../../Text/Text'
+import { LightDarkButtons } from '../../../LightDarkButtons/LightDarkButtons'
 
 interface Props {
     menuItems: IMenuItem[]
@@ -22,6 +23,7 @@ export function MenuPopup({ menuItems, onToggleMenu }: Props) {
             <Text type='muted' classNames='layout-padding-inline-xl'>
                 Hello world!
             </Text>
+            <LightDarkButtons />
         </motion.section>
     )
 }

@@ -7,9 +7,16 @@ import { ProjectDetails } from '../pages/ProjectDetails/ProjectDetails'
 import { Cursor } from '../components/Cursor/Cursor'
 import { Info } from '../pages/Info/Info'
 import { AnimatePresence } from 'framer-motion'
+import { useMouseMove } from '../hooks/useMouseMove'
+import { useEffect } from 'react'
+import { setMousePos } from '../store/system.actions'
 
 function App() {
     const location = useLocation()
+    const mousePos = useMouseMove()
+    useEffect(() => {
+        setMousePos(mousePos)
+    }, [mousePos])
 
     return (
         <div className='app'>
