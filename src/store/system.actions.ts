@@ -8,3 +8,7 @@ export function setMousePos(mousePos: MousePos) {
 export function setTheme(theme: string) {
     store.dispatch<SystemAction>({ type: 'SET_THEME', theme })
 }
+
+export function setMouseTarget(target: Element | null) {
+    store.dispatch<SystemAction>({ type: 'SET_MOUSE_TARGET', target })
+}

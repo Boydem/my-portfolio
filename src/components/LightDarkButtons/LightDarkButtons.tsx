@@ -19,7 +19,7 @@ export function LightDarkButtons() {
     }
 
     return (
-        <section className='light-dark-buttons layout-margin'>
+        <section className='light-dark-buttons'>
             <button
                 data-hover={true}
                 className={`light-btn ${theme === 'light' ? 'active' : ''}`}

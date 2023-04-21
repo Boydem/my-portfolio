@@ -1,11 +1,10 @@
 import { motion } from 'framer-motion'
-import { Text } from '../../components/Text/Text'
-import { Link, useNavigate, useParams } from 'react-router-dom'
-import { BsDash } from 'react-icons/bs'
+import { useNavigate, useParams } from 'react-router-dom'
 import { useEffect, useRef, useState } from 'react'
 import { projectsService } from '../../services/project.service'
 import { IProjectWithNext } from '../../models/project'
 import { InnerContent } from './parts/InnerContent/InnerContent'
+
 const containerVatiants = {
     hidden: {
         opacity: 0,
@@ -23,20 +22,19 @@ export function ProjectDetails() {
     const { projectId } = useParams()
     const navigate = useNavigate()
     useEffect(() => {
-        console.log('projectId:', projectId)
+        const getProject = (projId: string) => {
+            try {
+                const data = projectsService.getProjectById(projId)
+                setProject(data)
+            } catch (err) {
+                console.log('err:', err)
+                navigate('/')
+            }
+        }
         if (projectId !== '' && projectId !== undefined) getProject(projectId)
         else navigate('/')
     }, [projectId, navigate])
 
-    const getProject = async (projId: string) => {
-        try {
-            const data = await projectsService.getProjectById(projId)
-            console.log('data:', data)
-            setProject(data)
-        } catch (err) {
-            console.log('err:', err)
-        }
-    }
     // Component Scroll functionality
     const innerRef = useRef<HTMLElement | null>(null)
     const [scrollX, setScrollX] = useState(0)

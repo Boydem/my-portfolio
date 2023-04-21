@@ -25,7 +25,7 @@ export function Menu() {
 
     return (
         <>
-            <button onClick={toggleMenu} data-hover={true} className='menu layout-margin'>
+            <button onClick={toggleMenu} data-hover={true} className='menu'>
                 <AnimatePresence mode='wait'>
                     <motion.span
                         key={`${isOpen ? 'close' : 'menu'}`}

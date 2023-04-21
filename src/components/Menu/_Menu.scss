@@ -6,14 +6,20 @@
     display: inline-flex;
     align-items: center;
     position: fixed;
-    bottom: 0;
-    left: 0;
+    bottom: $layout-padding-md + 1rem;
+    left: $layout-padding-sm;
     text-transform: uppercase;
     transform: rotate(-90deg) translateY(-100%);
     font-size: 0.75rem;
     line-height: 1;
     color: $c-text;
     letter-spacing: 1px;
+    @media (min-width: $break-medium) {
+        left: $layout-padding-md;
+    }
+    @media (min-width: $break-large) {
+        left: $layout-padding-lg;
+    }
     .menu-btn {
         position: absolute;
         top: 100%;

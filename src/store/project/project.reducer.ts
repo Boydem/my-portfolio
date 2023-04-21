@@ -1,11 +1,10 @@
-import { IProject } from '../../models/project'
+import { IProject, IProjectWithNext } from '../../models/project'
 import { projectsService } from '../../services/project.service'
 
 // Project state:
 export interface IProjectState {
     projects: IProject[]
     isLoading: boolean
-    totalPages: number | null
 }
 
 export type ProjectAction =
@@ -15,12 +14,10 @@ export type ProjectAction =
 const initialState: IProjectState = {
     projects: projectsService.loadProjects(),
     isLoading: false,
-    totalPages: null,
 }
 
 export function projectReducer(state = initialState, action: ProjectAction) {
     // {type: SOME_TYPE, data}
-
     switch (action.type) {
         // Projects
         case 'SET_PROJECTS':
