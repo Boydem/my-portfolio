@@ -66,7 +66,9 @@ export function InnerContent({ project }: Props) {
                             alt={project.nextProject.title}
                             data-link-hover={true}
                         />
-                        <Text data-hover={true}>Next</Text>
+                        <Text type='title' data-hover={true}>
+                            Next
+                        </Text>
                     </Link>
                 </div>
             </section>
