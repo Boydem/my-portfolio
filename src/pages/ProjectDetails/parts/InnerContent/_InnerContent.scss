@@ -1,7 +1,7 @@
 .project-details {
     .inner {
         .header {
-            height: 100%;
+            flex-grow: 1;
             position: relative;
             display: flex;
             align-items: center;
@@ -36,11 +36,18 @@
             height: 100%;
             flex-shrink: 0;
             display: inline-flex;
-            overflow: hidden;
             img {
                 flex-shrink: 0;
                 width: auto;
-                height: auto;
+                height: 100vh;
+                &:first-child {
+                    display: none;
+                }
+                @media (min-width: $break-medium) {
+                    &:first-child {
+                        display: block;
+                    }
+                }
             }
         }
         .next-project {
