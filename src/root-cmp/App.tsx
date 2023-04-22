@@ -39,7 +39,7 @@ function App() {
                     <Route path='/info' element={<Info />} />
                 </Routes>
             </AnimatePresence>
-            <Menu />
+            {/* <Menu /> */}
             <Cursor />
         </div>
     )
