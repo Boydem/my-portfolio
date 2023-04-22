@@ -40,7 +40,7 @@ function App() {
                 </Routes>
             </AnimatePresence>
             <Menu />
-            <Cursor />
+            {isTouchDevice ? null : <Cursor />}
         </div>
     )
 }

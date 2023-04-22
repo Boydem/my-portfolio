@@ -6,6 +6,7 @@ body {
     transition: color 0.2s, background-color 0.2s;
     // Disable default cusor pointer
     cursor: none;
+    overscroll-behavior: none;
 }
 
 //
