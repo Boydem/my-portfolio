@@ -1,10 +1,12 @@
 @import './parts/Gallery/Gallery';
 .home {
-    height: 100vh;
-    max-height: 100vh;
     .container {
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: translateY(100%);
         max-width: 100dvw;
-        position: relative;
+        // position: relative;
         display: flex;
         align-items: center;
         flex-direction: column;
