@@ -1,10 +1,11 @@
 .menu-link {
     display: inline-block;
     text-transform: uppercase;
-    letter-spacing: -2.5px;
+    letter-spacing: -2px;
     transition: all 0.2s;
     opacity: 1;
     position: relative;
+    margin-bottom: 0.5rem;
     &::before {
         content: '';
         position: absolute;

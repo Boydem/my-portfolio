@@ -1,6 +1,7 @@
 import { MouseEvent, useState } from 'react'
 import { Text } from '../../../../components/Text/Text'
 import { IProject } from '../../../../models/project'
+import { Link } from 'react-router-dom'
 
 interface Props {
     projects: IProject[]
@@ -8,20 +9,16 @@ interface Props {
 
 export function InnerContent({ projects }: Props) {
     const [hoveredProject, setHoveredProject] = useState<IProject | null>(null)
-    const [hoverPosition, setHoverPosition] = useState<'top' | 'bottom' | null>(null)
+    const [hoverState, setHoverState] = useState<'enter' | 'leave' | null>(null)
 
     function handleMouseHover(ev: MouseEvent<HTMLLIElement>, type: 'enter' | 'leave', proj: IProject) {
-        if (type === 'enter') {
-            const rect = ev.currentTarget.getBoundingClientRect()
-            const mouseY = ev.clientY - rect.top
-            setHoveredProject(proj)
-            setHoverPosition(mouseY > rect.height / 2 ? 'bottom' : 'top')
-        } else {
+        setHoveredProject(proj)
+        setHoverState(type)
+        if (type === 'leave') {
             setHoveredProject(null)
-            setHoverPosition(null)
+            setHoverState(null)
         }
     }
-
     return (
         <div className='inner-content'>
             <div className='projects-image'>
@@ -29,13 +26,13 @@ export function InnerContent({ projects }: Props) {
                     <div
                         style={
                             {
-                                '--tl': hoveredProject === proj && hoverPosition === 'top' ? 1 : 0,
-                                '--tr': hoveredProject === proj && hoverPosition === 'top' ? 1 : 0,
-                                '--bl': hoveredProject === proj && hoverPosition === 'bottom' ? 1 : 0,
-                                '--br': hoveredProject === proj && hoverPosition === 'bottom' ? 1 : 0,
+                                '--tl': hoveredProject === proj && hoverState === 'leave' ? 1 : 0,
+                                '--tr': hoveredProject === proj && hoverState === 'leave' ? 1 : 0,
+                                '--bl': hoveredProject === proj && hoverState === 'enter' ? 1 : 0,
+                                '--br': hoveredProject === proj && hoverState === 'enter' ? 1 : 0,
                             } as React.CSSProperties
                         }
-                        className='img-container'
+                        className={`img-container ${hoveredProject === proj ? 'hovered' : ''}`}
                         key={`pi-${proj._id}`}
                     >
                         <img src={proj.imgsURL[0]} alt={proj.title} />
@@ -45,16 +42,17 @@ export function InnerContent({ projects }: Props) {
             <ul className='projects-list clean-list'>
                 {projects.map(proj => (
                     <li
+                        data-hover
                         key={`pl-${proj._id}`}
                         onMouseEnter={ev => handleMouseHover(ev, 'enter', proj)}
                         onMouseLeave={ev => handleMouseHover(ev, 'leave', proj)}
                     >
-                        <Text type='title' size='medium'>
-                            {proj.title}
-                        </Text>
-                        <Text type='title' size='small'>
-                            {proj.stack[0]}
-                        </Text>
+                        <Link to={`/project/${proj._id}`}>
+                            <Text type='title' size='medium'>
+                                {proj.title}
+                            </Text>
+                            <Text size='xsmall'>{proj.stack[0]}</Text>
+                        </Link>
                     </li>
                 ))}
             </ul>

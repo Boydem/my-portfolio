@@ -2,7 +2,7 @@ import { ReactNode } from 'react'
 
 type TextTypes = 'regular' | 'title' | 'muted'
 type TextSizes = 'xsmall' | 'small' | 'medium' | 'large'
-type TextDisplays = 'block' | 'inline'
+type TextDisplays = 'block' | 'inline' | number
 
 interface Props {
     children: ReactNode
@@ -16,7 +16,13 @@ interface Props {
 export function Text({ children, type = 'regular', size = 'small', display = 'block', classNames, ...rest }: Props) {
     return (
         <p
-            style={display === 'block' ? { width: '100%' } : { width: 'max-content' }}
+            style={
+                display === 'block'
+                    ? { width: '100%' }
+                    : display === 'inline'
+                    ? { width: 'max-content' }
+                    : { width: display + '%' }
+            }
             className={`text type-${type} size-${size} ${classNames ? classNames : ''}`}
             {...rest}
         >

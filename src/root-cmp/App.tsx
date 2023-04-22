@@ -8,16 +8,26 @@ import { Cursor } from '../components/Cursor/Cursor'
 import { Info } from '../pages/Info/Info'
 import { AnimatePresence } from 'framer-motion'
 import { useMouseMove } from '../hooks/useMouseMove'
-import { useEffect } from 'react'
+import { useCallback, useEffect, useState } from 'react'
 import { setMousePos, setMouseTarget } from '../store/system.actions'
+import { useDispatch } from 'react-redux'
+import { useTouchDevice } from '../hooks/useTouchDevice'
 
 function App() {
+    const isTouchDevice = useTouchDevice()
     const location = useLocation()
     const { mousePos, target } = useMouseMove()
+    const dispatch = useDispatch()
+
     useEffect(() => {
         setMousePos(mousePos)
-        setMouseTarget(target)
     }, [mousePos])
+    useEffect(() => {
+        setMouseTarget(target)
+    }, [target])
+    useEffect(() => {
+        dispatch({ type: 'SET_IS_TOUCH_DEVICE', isTouchDevice })
+    }, [isTouchDevice, dispatch])
 
     return (
         <div className='app'>
