@@ -7,7 +7,6 @@ import { VscGithubAlt, VscArrowLeft, VscLinkExternal } from 'react-icons/vsc'
 interface Props {
     project: IProjectWithNext
 }
-
 export function InnerContent({ project }: Props) {
     return (
         <>

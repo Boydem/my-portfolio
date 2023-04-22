@@ -4,6 +4,8 @@ import { useEffect, useRef, useState } from 'react'
 import { projectsService } from '../../services/project.service'
 import { IProjectWithNext } from '../../models/project'
 import { InnerContent } from './parts/InnerContent/InnerContent'
+import { useSelector } from 'react-redux'
+import { RootState } from '../../store/store'
 
 const containerVatiants = {
     hidden: {
