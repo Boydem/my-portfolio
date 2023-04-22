@@ -4,6 +4,7 @@ body {
     color: $c-text;
     background-color: $c-bg;
     transition: color 0.2s, background-color 0.2s;
+    overflow: hidden;
     // Disable default cusor pointer
     cursor: none;
 }

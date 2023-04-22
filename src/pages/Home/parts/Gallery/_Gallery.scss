@@ -1,10 +1,9 @@
 .gallery {
     width: 100%;
     align-self: flex-start;
-    margin-bottom: 1rem;
     .inner {
         position: relative;
-        height: 30vh;
+        height: 35vh;
         overflow-x: scroll;
         overflow-y: hidden;
         scroll-behavior: smooth;

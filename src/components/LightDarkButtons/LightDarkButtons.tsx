@@ -27,7 +27,7 @@ export function LightDarkButtons() {
             >
                 Light
             </button>
-            <span> | </span>
+            <span> / </span>
             <button
                 data-hover={true}
                 className={`dark-btn ${theme === 'dark' ? 'active' : ''}`}
