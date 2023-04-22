@@ -44,16 +44,16 @@ export function InnerContent({ project }: Props) {
                         </Link>
                     </div>
                 </div>
-                <Text type='title' size='medium'>
-                    {project.title}
-                </Text>
-                <Text size='xsmall'>{project.desc}</Text>
+                <div className='title-wrapper flex column'>
+                    <Text type='title' size='medium'>
+                        {project.title}
+                    </Text>
+                    <Text size='xsmall'>{project.desc}</Text>
+                </div>
             </div>
             <section className='images'>
                 {project.imgsURL.map((imgURL, index) => (
-                    <div key={index} className='img-container'>
-                        <img src={imgURL} alt='lorem ipsum' />
-                    </div>
+                    <img key={index} src={imgURL} alt='lorem ipsum' />
                 ))}
             </section>
             <section className='next-project layout-padding-inline'>

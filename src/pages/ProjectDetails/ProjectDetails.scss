@@ -3,11 +3,12 @@
 .project-details {
     display: flex;
     height: 100vh;
-    overflow-x: scroll;
+    overflow-y: hidden;
     .inner {
         transition: transform 1s cubic-bezier(0.22, 1, 0.22, 1);
         display: flex;
-        max-height: 100vh;
+        /* max-height: 100vh; */
+        flex-grow: 1;
         > * {
             flex-shrink: 0;
         }
