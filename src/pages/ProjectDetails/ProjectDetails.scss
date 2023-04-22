@@ -5,11 +5,18 @@
     height: 100vh;
     max-height: 100vh;
     overflow-y: hidden;
-    scroll-behavior: smooth;
+
     .inner {
         transition: transform 1s cubic-bezier(0.22, 1, 0.22, 1);
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        overflow-y: hidden;
+        scroll-behavior: smooth;
         display: flex;
-        /* max-height: 100vh; */
+        align-items: center;
         flex-grow: 1;
         > * {
             flex-shrink: 0;
