@@ -24,7 +24,7 @@ $break-small: 640px;
     }
 }
 .layout-padding-inline-xl {
-    padding-inline: $layout-padding-sm * 2;
+    padding-inline: $layout-padding-sm;
     @media (min-width: $break-medium) {
         padding-inline: $layout-padding-md * 2;
     }
