@@ -21,8 +21,8 @@
         }
     }
     .item-container {
-        min-width: max-content;
-        height: auto;
+        width: auto;
+        height: 100%;
         display: flex;
         aspect-ratio: 1920 / 920;
         img {
