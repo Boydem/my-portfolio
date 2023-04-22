@@ -33,15 +33,14 @@
             }
         }
         .images {
-            height: 100%;
+            flex-grow: 1;
             flex-shrink: 0;
             display: inline-flex;
-
+            overflow: hidden;
             img {
                 flex-shrink: 0;
-                width: auto;
-                // width: 100%;
-                height: 100vh;
+                // width: auto;
+                // height: 100vh;
             }
         }
         .next-project {
