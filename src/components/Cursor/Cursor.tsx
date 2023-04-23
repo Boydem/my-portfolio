@@ -34,9 +34,7 @@ export function Cursor() {
             style={{
                 transform: `translate3d(${
                     window.innerWidth > mousePos.x + 20 ? mousePos.x : window.innerWidth - 20
-                }px,${window.innerHeight > mousePos.y + 20 ? mousePos.y : window.innerHeight - 20}px,0px) scale(${
-                    isHover || isLinkHover ? 2.25 : 1
-                })`,
+                }px,${window.innerHeight > mousePos.y + 20 ? mousePos.y : window.innerHeight - 20}px,0px) `,
             }}
         >
             <div className={`cursor-shape ${isHover ? 'hover' : ''} ${isLinkHover ? 'link-hover' : ''}`}></div>

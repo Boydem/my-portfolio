@@ -10,7 +10,7 @@
     left: $layout-padding-sm;
     text-transform: uppercase;
     transform: rotate(-90deg) translateY(-100%);
-    font-size: 0.75rem;
+    font-size: $text-xsmall;
     line-height: 1;
     color: $c-text;
     letter-spacing: 1px;

@@ -8,6 +8,7 @@
         font-size: $text-large;
         font-family: $font-family-serif;
         color: $c-text;
+        // letter-spacing: 0px;
     }
     &.type-muted {
         color: $c-muted;
@@ -16,7 +17,7 @@
         font-size: $text-xsmall;
     }
     &.size-small {
-        font-size: $text-small;
+        font-size: $text-base;
     }
     &.size-medium {
         font-size: $text-medium;

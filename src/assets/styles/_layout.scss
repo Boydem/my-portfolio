@@ -29,7 +29,7 @@ $break-small: 640px;
         padding-inline: $layout-padding-md * 2;
     }
     @media (min-width: $break-large) {
-        padding-inline: $layout-padding-lg * 2;
+        padding-inline: $layout-padding-lg * 3;
     }
 }
 .layout-padding-block {
