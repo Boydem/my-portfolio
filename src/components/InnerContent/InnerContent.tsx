@@ -5,5 +5,5 @@ interface Props {
 }
 
 export function InnerContent({ children }: Props) {
-    return <div className='inner-content layout-padding-inline'>{children}</div>
+    return <div className='inner-content'>{children}</div>
 }

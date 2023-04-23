@@ -1,13 +1,17 @@
 .inner-content {
-    padding-top: $layout-padding-md;
     display: flex;
-    height: 100%;
     align-items: flex-start;
-    justify-content: center;
+    padding-top: $layout-padding-sm;
+    // justify-content: center;
     width: 100%;
     overflow-x: hidden;
-    // gap: $layout-padding-lg * 2;
+    padding-inline: $layout-padding-sm + 1.5rem;
     @media (min-width: $break-medium) {
-        align-items: center;
+        padding-top: $layout-padding-md;
+        padding-inline: $layout-padding-md;
+    }
+    @media (min-width: $break-large) {
+        padding-top: $layout-padding-lg;
+        padding-inline: $layout-padding-lg;
     }
 }

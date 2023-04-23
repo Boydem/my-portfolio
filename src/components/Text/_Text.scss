@@ -3,8 +3,10 @@
     &.type-regular {
         color: $c-text;
         font-family: $font-family-sans;
+        line-height: 1.5;
     }
     &.type-title {
+        line-height: 1.5;
         font-size: $text-medium;
         font-family: $font-family-serif;
         color: $c-text;
@@ -20,10 +22,12 @@
         font-size: $text-base;
     }
     &.size-medium {
+        line-height: 1;
         font-size: $text-medium - 0.75rem;
     }
     &.size-large {
-        font-size: $text-medium - 0.55rem;
+        line-height: 1;
+        font-size: $text-medium;
     }
     @media (min-width: $break-medium) {
         &.type-title {

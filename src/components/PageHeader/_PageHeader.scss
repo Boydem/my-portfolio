@@ -1,19 +1,21 @@
 .page-header {
-    padding-top: $layout-padding-md;
+    padding-top: $layout-padding-sm;
     display: flex;
     align-items: flex-end;
     width: 100%;
+    padding-inline: $layout-padding-sm + 1.5rem;
     padding-inline-end: 0;
     @media (min-width: $break-medium) {
-        padding-top: $layout-padding-sm;
-        position: absolute;
-        top: $layout-padding-md;
+        padding-top: $layout-padding-md;
+        padding-inline: $layout-padding-md;
+    }
+    @media (min-width: $break-large) {
+        padding-inline: $layout-padding-lg;
     }
     .page-title {
         letter-spacing: -2px;
         text-transform: uppercase;
         position: relative;
-        max-width: 50vw;
         flex-grow: 1;
         margin-inline-start: auto;
         // word-wrap: normal;
@@ -26,6 +28,17 @@
             height: 1px;
             background: linear-gradient(to left, rgba(255, 255, 255, 0), white);
             border-radius: 20px;
+        }
+    }
+    .logo {
+        display: none;
+    }
+    @media (min-width: $break-medium) {
+        .logo {
+            display: block;
+        }
+        .page-title {
+            max-width: 50vw;
         }
     }
 }

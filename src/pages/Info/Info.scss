@@ -16,13 +16,22 @@
         }
     }
     .text-container {
-        // margin-inline-start: auto;
-        // flex-grow: 1;
-        width: 40vw;
         height: 100%;
-        margin-inline-start: auto;
         display: flex;
+        flex-direction: column;
         align-items: center;
-        justify-content: flex-end;
+        margin-inline-start: auto;
+        .text-block {
+            display: flex;
+            :first-child {
+                flex: 0 0 120px;
+            }
+            &:not(:last-child) {
+                margin-bottom: 1rem;
+            }
+        }
+        @media (min-width: $break-medium) {
+            width: 50vw;
+        }
     }
 }

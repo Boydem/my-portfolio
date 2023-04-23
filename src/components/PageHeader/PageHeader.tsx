@@ -7,7 +7,7 @@ interface Props {
 
 export function PageHeader({ title }: Props) {
     return (
-        <header className='page-header layout-padding-inline'>
+        <header className='page-header'>
             <Logo size='small' />
             <Text type='title' size='large' display={50} classNames='page-title'>
                 {title}
