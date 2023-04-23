@@ -1,5 +1,4 @@
 import { useState, useRef, useEffect } from 'react'
-import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
 import { IProject } from '../../../../models/project'
 import { useSelector } from 'react-redux'
@@ -42,18 +41,12 @@ export function Gallery({ items }: Props) {
     }, [mousePos.x, isTouchDevice])
 
     return (
-        <motion.section
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.5, ease: 'easeInOut', delay: 0.5 }}
-            className='gallery layout-padding-inline disable-scrollbar'
-        >
+        <section className='gallery layout-padding-inline disable-scrollbar'>
             <div ref={innerRef} className='inner disable-scrollbar'>
-                <motion.div
+                <div
                     ref={contentRef}
                     className='contnet disable-scrollbar'
-                    animate={{ x: `${translateX}px` }}
-                    transition={{ duration: 0.5 }}
+                    style={{ transform: `translate3d(${translateX}px, 0px, 0px)` }}
                 >
                     {items && items.length
                         ? items.map(item => (
@@ -74,8 +67,8 @@ export function Gallery({ items }: Props) {
                                       <div className='loader flex flex-center'>Loading...</div>
                                   </div>
                               ))}
-                </motion.div>
+                </div>
             </div>
-        </motion.section>
+        </section>
     )
 }

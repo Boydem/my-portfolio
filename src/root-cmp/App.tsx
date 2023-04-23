@@ -36,18 +36,16 @@ function App() {
 
     return (
         <div className='app'>
-            <MotionConfig reducedMotion='never'>
-                <AnimatePresence mode='wait'>
-                    <PageWrapper windowSize={windowSize} key={location.pathname}>
-                        <Routes location={location}>
-                            <Route path='/' element={<Home />} />
-                            <Route path='/project' element={<ProjectIndex />} />
-                            <Route path='/project/:projectId' element={<ProjectDetails />} />
-                            <Route path='/info' element={<Info />} />
-                        </Routes>
-                    </PageWrapper>
-                </AnimatePresence>
-            </MotionConfig>
+            <AnimatePresence mode='wait'>
+                <PageWrapper windowSize={windowSize} key={location.pathname}>
+                    <Routes location={location}>
+                        <Route path='/' element={<Home />} />
+                        <Route path='/project' element={<ProjectIndex />} />
+                        <Route path='/project/:projectId' element={<ProjectDetails />} />
+                        <Route path='/info' element={<Info />} />
+                    </Routes>
+                </PageWrapper>
+            </AnimatePresence>
             <Menu />
             {isTouchDevice ? null : <Cursor />}
         </div>
