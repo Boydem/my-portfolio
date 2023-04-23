@@ -50,6 +50,12 @@ export function InnerContent({ project }: Props) {
                     </Text>
                     <Text size='xsmall'>{project.desc}</Text>
                 </div>
+                <div className='scroll-indicator'>
+                    <Text display={'inline'} type='title' size='xsmall'>
+                        Scroll
+                    </Text>
+                    <span className='scroll-animated'></span>
+                </div>
             </div>
             <section className='images'>
                 {project.imgsURL.map((imgURL, index) => (
