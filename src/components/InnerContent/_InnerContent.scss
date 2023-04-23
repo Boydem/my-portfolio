@@ -2,12 +2,12 @@
     display: flex;
     align-items: center;
     flex-grow: 1;
-    padding-top: $layout-padding-md + 1rem;
+    padding-top: $layout-padding-md;
     // justify-content: center;
     width: 100%;
     overflow-x: hidden;
-    padding-inline-start: $layout-padding-sm + 3rem;
-    padding-inline-end: $layout-padding-sm + 1.5rem;
+    padding-inline-start: $layout-padding-sm + 1.5rem;
+    padding-inline-end: $layout-padding-sm;
     @media (min-width: $break-medium) {
         padding-top: $layout-padding-md;
         padding-inline: $layout-padding-md;

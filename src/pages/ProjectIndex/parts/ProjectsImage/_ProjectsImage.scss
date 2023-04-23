@@ -1,13 +1,15 @@
 .projects-image {
     display: none;
+    // flex: 0 0 200px;
+    flex-grow: 1;
     @media (min-width: $break-medium) {
         align-self: center;
         display: flex;
         align-items: center;
         justify-content: center;
         position: relative;
-        margin-inline-end: 2rem;
-        height: 30vh;
+        // margin-inline-end: 2rem;
+        // height: 30vh;
         aspect-ratio: 2;
         .img-container {
             overflow: hidden;

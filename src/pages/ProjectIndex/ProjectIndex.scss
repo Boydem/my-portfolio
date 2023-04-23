@@ -1,2 +1,8 @@
 @import './parts/ProjectsImage/ProjectsImage';
 @import './parts/ProjetsList/ProjectsList';
+
+.project-index {
+    .inner-content {
+        gap: $layout-padding-md;
+    }
+}

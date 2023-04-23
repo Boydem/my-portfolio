@@ -8,11 +8,11 @@ export function Info() {
     return (
         <section className='info'>
             <PageBg />
-            <PageHeader title={'information'} />
+            <PageHeader title='information' />
             <InnerContent>
                 <div className='text-container'>
                     <div className='text-block'>
-                        <Text size='xsmall' display={'inline'}>
+                        <Text size='xsmall' display='inline'>
                             About Me
                         </Text>
                         <Text size='xsmall'>
@@ -21,7 +21,7 @@ export function Info() {
                         </Text>
                     </div>
                     <div className='text-block'>
-                        <Text size='xsmall' display={'inline'}>
+                        <Text size='xsmall' display='inline'>
                             Tech Skills
                         </Text>
                         <Text size='xsmall'>
@@ -31,33 +31,36 @@ export function Info() {
                         </Text>
                     </div>
                     <div className='text-block'>
-                        <Text size='xsmall' display={'inline'}>
+                        <Text size='xsmall' display='inline'>
                             Social Links
                         </Text>
                         <Text size='xsmall'>
-                            <Link data-hover to={'https://github.com/Boydem'}>
+                            <Link target='_blank' data-hover to={'https://github.com/Boydem'}>
                                 Github
                             </Link>
-                            <Link data-hover to={'https://www.linkedin.com/in/noam-dahan-90a797227/'}>
+                            <Link target='_blank' data-hover to={'https://www.linkedin.com/in/noam-dahan-90a797227/'}>
                                 Linkedin
                             </Link>
                         </Text>
                     </div>
                     <div className='text-block'>
-                        <Text size='xsmall' display={'inline'}>
+                        <Text size='xsmall' display='inline'>
                             Mail me
                         </Text>
-                        <Text data-hover size='xsmall' display={'block'}>
-                            <Link to={'https://mail.google.com/mail/?view=cm&fs=1&to=noyemdahan@gmail.com'}>
+                        <Text data-hover size='xsmall' display='block'>
+                            <Link
+                                target='_blank'
+                                to={'https://mail.google.com/mail/?view=cm&fs=1&to=noyemdahan@gmail.com'}
+                            >
                                 Noyemdahan@gmail.com
                             </Link>
                         </Text>
                     </div>
                     <div className='text-block'>
-                        <Text size='xsmall' display={'inline'}>
+                        <Text size='xsmall' display='inline'>
                             Lets talk
                         </Text>
-                        <Text data-hover size='xsmall' display={'block'}>
+                        <Text data-hover size='xsmall' display='block'>
                             <Link to={'tel:972523130909'}>0523130909</Link>
                         </Text>
                     </div>
