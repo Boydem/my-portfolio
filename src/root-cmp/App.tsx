@@ -42,10 +42,10 @@ function App() {
                         <Route path='/project/:projectId' element={<ProjectDetails />} />
                         <Route path='/info' element={<Info />} />
                     </Routes>
+                    <Menu />
+                    {isTouchDevice ? null : <Cursor />}
                 </PageWrapper>
             </AnimatePresence>
-            <Menu />
-            {isTouchDevice ? null : <Cursor />}
         </div>
     )
 }

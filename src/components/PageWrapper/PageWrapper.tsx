@@ -7,7 +7,7 @@ interface Props {
 
 export function PageWrapper({ children, windowSize }: Props) {
     return (
-        <section style={{ '--vh': `${windowSize.vh}px` } as CSSProperties} className='page-wrapper'>
+        <section style={{ '--vh': windowSize.vh } as CSSProperties} className='page-wrapper'>
             {children}
         </section>
     )
