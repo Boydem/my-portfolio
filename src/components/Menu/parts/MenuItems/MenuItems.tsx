@@ -9,7 +9,7 @@ interface Props {
 
 export function MenuItems({ menuItems, onToggleMenu }: Props) {
     return (
-        <section className='menu-items layout-padding-block layout-padding-inline-xl'>
+        <section className='menu-items'>
             {menuItems.map((item, index) => (
                 <motion.div
                     onClick={onToggleMenu}
@@ -19,9 +19,7 @@ export function MenuItems({ menuItems, onToggleMenu }: Props) {
                     key={index}
                 >
                     <NavLink data-hover={true} to={`${item.url}`} className='menu-link' key={item._id}>
-                        <Text type='title' display='inline' size='medium'>
-                            {item.title}
-                        </Text>
+                        {item.title}
                     </NavLink>
                 </motion.div>
             ))}

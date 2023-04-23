@@ -5,7 +5,7 @@
         font-family: $font-family-sans;
     }
     &.type-title {
-        font-size: $text-large;
+        font-size: $text-medium;
         font-family: $font-family-serif;
         color: $c-text;
         // letter-spacing: 0px;
@@ -20,9 +20,26 @@
         font-size: $text-base;
     }
     &.size-medium {
-        font-size: $text-medium;
+        font-size: $text-medium - 0.75rem;
     }
     &.size-large {
-        font-size: $text-large;
+        font-size: $text-medium;
+    }
+    @media (min-width: $break-medium) {
+        &.type-title {
+            font-size: $text-large;
+        }
+        &.size-xsmall {
+            font-size: $text-xsmall;
+        }
+        &.size-small {
+            font-size: $text-base;
+        }
+        &.size-medium {
+            font-size: $text-medium;
+        }
+        &.size-large {
+            font-size: $text-large;
+        }
     }
 }

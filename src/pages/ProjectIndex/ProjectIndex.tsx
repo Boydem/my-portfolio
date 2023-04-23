@@ -18,6 +18,7 @@ const containerVatiants = {
 
 export function ProjectIndex() {
     const { projects } = useSelector((storeState: RootState) => storeState.projectModule)
+    const { isTouchDevice } = useSelector((storeState: RootState) => storeState.systemModule)
 
     return (
         <motion.section
@@ -29,7 +30,7 @@ export function ProjectIndex() {
         >
             <PageBg />
             <PageHeader />
-            <InnerContent projects={projects} />
+            <InnerContent isTouchDevice={isTouchDevice} projects={projects} />
         </motion.section>
     )
 }

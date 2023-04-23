@@ -1,11 +1,15 @@
 .page-header {
+    padding-top: $layout-padding-md;
     display: flex;
     align-items: flex-end;
     justify-content: space-between;
-    position: absolute;
     width: 100%;
-    top: $layout-padding-md;
     padding-inline-end: 0;
+    @media (min-width: $break-medium) {
+        padding-top: $layout-padding-sm;
+        position: absolute;
+        top: $layout-padding-md;
+    }
     .page-title {
         letter-spacing: -2px;
         text-transform: uppercase;

@@ -33,11 +33,8 @@ $break-small: 640px;
     }
 }
 .layout-padding-block {
-    padding-block: $layout-padding-sm;
+    padding-block: $layout-padding-md;
     @media (min-width: $break-medium) {
-        padding-block: $layout-padding-md;
-    }
-    @media (min-width: $break-large) {
         padding-block: $layout-padding-lg;
     }
 }
