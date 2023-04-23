@@ -6,7 +6,7 @@ import { ProjectIndex } from '../pages/ProjectIndex/ProjectIndex'
 import { ProjectDetails } from '../pages/ProjectDetails/ProjectDetails'
 import { Cursor } from '../components/Cursor/Cursor'
 import { Info } from '../pages/Info/Info'
-import { AnimatePresence } from 'framer-motion'
+import { AnimatePresence, MotionConfig } from 'framer-motion'
 import { useMouseMove } from '../hooks/useMouseMove'
 import { useEffect } from 'react'
 import { setMousePos, setMouseTarget } from '../store/system.actions'
@@ -36,16 +36,18 @@ function App() {
 
     return (
         <div className='app'>
-            <AnimatePresence mode='wait'>
-                <PageWrapper windowSize={windowSize} key={location.pathname}>
-                    <Routes location={location}>
-                        <Route path='/' element={<Home />} />
-                        <Route path='/project' element={<ProjectIndex />} />
-                        <Route path='/project/:projectId' element={<ProjectDetails />} />
-                        <Route path='/info' element={<Info />} />
-                    </Routes>
-                </PageWrapper>
-            </AnimatePresence>
+            <MotionConfig reducedMotion='never'>
+                <AnimatePresence mode='wait'>
+                    <PageWrapper windowSize={windowSize} key={location.pathname}>
+                        <Routes location={location}>
+                            <Route path='/' element={<Home />} />
+                            <Route path='/project' element={<ProjectIndex />} />
+                            <Route path='/project/:projectId' element={<ProjectDetails />} />
+                            <Route path='/info' element={<Info />} />
+                        </Routes>
+                    </PageWrapper>
+                </AnimatePresence>
+            </MotionConfig>
             <Menu />
             {isTouchDevice ? null : <Cursor />}
         </div>

@@ -49,10 +49,11 @@ export function Gallery({ items }: Props) {
             className='gallery layout-padding-inline disable-scrollbar'
         >
             <div ref={innerRef} className='inner disable-scrollbar'>
-                <div
+                <motion.div
                     ref={contentRef}
                     className='contnet disable-scrollbar'
-                    style={{ transform: `translate3d(${translateX}px, 0px, 0px)` }}
+                    animate={{ x: `${translateX}px` }}
+                    transition={{ duration: 0.5 }}
                 >
                     {items && items.length
                         ? items.map(item => (
@@ -73,7 +74,7 @@ export function Gallery({ items }: Props) {
                                       <div className='loader flex flex-center'>Loading...</div>
                                   </div>
                               ))}
-                </div>
+                </motion.div>
             </div>
         </motion.section>
     )

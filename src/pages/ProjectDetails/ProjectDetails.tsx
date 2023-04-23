@@ -3,6 +3,7 @@ import { useEffect, useRef, useState } from 'react'
 import { projectsService } from '../../services/project.service'
 import { IProjectWithNext } from '../../models/project'
 import { InnerContent } from './parts/InnerContent/InnerContent'
+import { motion } from 'framer-motion'
 
 export function ProjectDetails() {
     // Component data
@@ -43,9 +44,9 @@ export function ProjectDetails() {
 
     return (
         <section className='project-details disable-scrollbar' onWheel={handleWheel}>
-            <section ref={innerRef} style={{ transform: `translate3d(${scrollX}px,0px,0px)` }} className='inner'>
+            <motion.section animate={{ x: scrollX }} ref={innerRef} className='inner'>
                 {project ? <InnerContent project={project} /> : null}
-            </section>
+            </motion.section>
         </section>
     )
 }
