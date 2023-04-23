@@ -23,7 +23,7 @@
         font-size: $text-medium - 0.75rem;
     }
     &.size-large {
-        font-size: $text-medium;
+        font-size: $text-medium - 0.55rem;
     }
     @media (min-width: $break-medium) {
         &.type-title {

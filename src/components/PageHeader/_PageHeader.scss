@@ -2,7 +2,6 @@
     padding-top: $layout-padding-md;
     display: flex;
     align-items: flex-end;
-    justify-content: space-between;
     width: 100%;
     padding-inline-end: 0;
     @media (min-width: $break-medium) {
@@ -14,6 +13,10 @@
         letter-spacing: -2px;
         text-transform: uppercase;
         position: relative;
+        max-width: 50vw;
+        flex-grow: 1;
+        margin-inline-start: auto;
+        // word-wrap: normal;
         &::before {
             content: '';
             position: absolute;

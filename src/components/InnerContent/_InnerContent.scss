@@ -1,0 +1,13 @@
+.inner-content {
+    padding-top: $layout-padding-md;
+    display: flex;
+    height: 100%;
+    align-items: flex-start;
+    justify-content: center;
+    width: 100%;
+    overflow-x: hidden;
+    // gap: $layout-padding-lg * 2;
+    @media (min-width: $break-medium) {
+        align-items: center;
+    }
+}

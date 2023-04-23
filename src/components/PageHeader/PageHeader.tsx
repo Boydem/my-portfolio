@@ -1,12 +1,16 @@
-import { Logo } from '../../../../components/Logo/Logo'
-import { Text } from '../../../../components/Text/Text'
+import { Logo } from '../Logo/Logo'
+import { Text } from '../Text/Text'
 
-export function PageHeader() {
+interface Props {
+    title: string
+}
+
+export function PageHeader({ title }: Props) {
     return (
         <header className='page-header layout-padding-inline'>
             <Logo size='small' />
             <Text type='title' size='large' display={50} classNames='page-title'>
-                Projects
+                {title}
             </Text>
         </header>
     )

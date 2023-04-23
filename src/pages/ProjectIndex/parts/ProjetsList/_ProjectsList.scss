@@ -1,0 +1,19 @@
+.projects-list {
+    transition: opacity 0.2s;
+    > li:not(:last-child) {
+        margin-bottom: 1rem;
+    }
+    li {
+        transition: opacity 0.2s;
+    }
+    li:hover {
+        transition: opacity 0.2s;
+        color: $c-text;
+        opacity: 1;
+    }
+}
+.projects-list:hover li:not(:hover) {
+    transition: opacity 0.2s;
+    color: $c-text;
+    opacity: 0.5;
+}
