@@ -12,9 +12,12 @@ import { useEffect } from 'react'
 import { setMousePos, setMouseTarget } from '../store/system.actions'
 import { useDispatch } from 'react-redux'
 import { useTouchDevice } from '../hooks/useTouchDevice'
+import { useWindowSize } from '../hooks/useWindowSize'
+import { PageWrapper } from '../components/PageWrapper/PageWrapper'
 
 function App() {
     const isTouchDevice = useTouchDevice()
+    const windowSize = useWindowSize()
     const location = useLocation()
     const { mousePos, target } = useMouseMove()
     const dispatch = useDispatch()
@@ -32,12 +35,14 @@ function App() {
     return (
         <div className='app'>
             <AnimatePresence mode='wait'>
-                <Routes location={location} key={location.pathname}>
-                    <Route path='/' element={<Home />} />
-                    <Route path='/project' element={<ProjectIndex />} />
-                    <Route path='/project/:projectId' element={<ProjectDetails />} />
-                    <Route path='/info' element={<Info />} />
-                </Routes>
+                <PageWrapper windowSize={windowSize}>
+                    <Routes location={location} key={location.pathname}>
+                        <Route path='/' element={<Home />} />
+                        <Route path='/project' element={<ProjectIndex />} />
+                        <Route path='/project/:projectId' element={<ProjectDetails />} />
+                        <Route path='/info' element={<Info />} />
+                    </Routes>
+                </PageWrapper>
             </AnimatePresence>
             <Menu />
             {isTouchDevice ? null : <Cursor />}

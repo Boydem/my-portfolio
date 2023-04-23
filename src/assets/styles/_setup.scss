@@ -39,3 +39,8 @@ html {
     height: fill-available;
     height: -webkit-fill-available;
 }
+
+.root,
+.app {
+    height: 100%;
+}
