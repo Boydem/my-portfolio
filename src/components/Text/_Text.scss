@@ -16,10 +16,11 @@
         color: $c-muted;
     }
     &.size-xsmall {
-        font-size: $text-xsmall;
+        font-size: 13px;
     }
     &.size-small {
-        font-size: $text-base;
+        font-size: 16px;
+        line-height: 1;
     }
     &.size-medium {
         line-height: 1;

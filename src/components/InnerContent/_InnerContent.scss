@@ -1,11 +1,13 @@
 .inner-content {
     display: flex;
-    align-items: flex-start;
-    padding-top: $layout-padding-sm;
+    align-items: center;
+    flex-grow: 1;
+    padding-top: $layout-padding-md + 1rem;
     // justify-content: center;
     width: 100%;
     overflow-x: hidden;
-    padding-inline: $layout-padding-sm + 1.5rem;
+    padding-inline-start: $layout-padding-sm + 3rem;
+    padding-inline-end: $layout-padding-sm + 1.5rem;
     @media (min-width: $break-medium) {
         padding-top: $layout-padding-md;
         padding-inline: $layout-padding-md;
