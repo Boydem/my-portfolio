@@ -1,22 +1,8 @@
-import { motion } from 'framer-motion'
 import { useNavigate, useParams } from 'react-router-dom'
 import { useEffect, useRef, useState } from 'react'
 import { projectsService } from '../../services/project.service'
 import { IProjectWithNext } from '../../models/project'
 import { InnerContent } from './parts/InnerContent/InnerContent'
-import { useSelector } from 'react-redux'
-import { RootState } from '../../store/store'
-
-const containerVatiants = {
-    hidden: {
-        opacity: 0,
-        transition: { delay: 0.25, duration: 0.5, ease: 'easeInOut' },
-    },
-    visible: {
-        opacity: 1,
-        transition: { delay: 0.25, duration: 0.5, ease: 'easeInOut' },
-    },
-}
 
 export function ProjectDetails() {
     // Component data
@@ -56,17 +42,10 @@ export function ProjectDetails() {
     }
 
     return (
-        <motion.section
-            variants={containerVatiants}
-            initial={'hidden'}
-            animate={'visible'}
-            exit={'hidden'}
-            className='project-details disable-scrollbar'
-            onWheel={handleWheel}
-        >
+        <section className='project-details disable-scrollbar' onWheel={handleWheel}>
             <section ref={innerRef} style={{ transform: `translate3d(${scrollX}px,0px,0px)` }} className='inner'>
                 {project ? <InnerContent project={project} /> : null}
             </section>
-        </motion.section>
+        </section>
     )
 }
