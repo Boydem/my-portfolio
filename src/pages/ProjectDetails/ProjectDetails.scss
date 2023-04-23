@@ -2,13 +2,8 @@
 
 .project-details {
     display: flex;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
     overflow-y: hidden;
-    scroll-behavior: smooth;
+
     .inner {
         transition: transform 1s cubic-bezier(0.22, 1, 0.22, 1);
         display: flex;
