@@ -43,11 +43,12 @@ export function InnerContent({ project }: Props) {
                         </Link>
                     </div>
                 </div>
-                <div className='title-wrapper flex column'>
+                <div className='text-wrapper flex column'>
                     <Text type='title' size='medium'>
                         {project.title}
                     </Text>
                     <Text size='xsmall'>{project.desc}</Text>
+                    <Text size='xsmall'>Tech stack: {project.stack.join(', ')}</Text>
                 </div>
                 <div className='scroll-indicator'>
                     <Text display={'inline'} type='title' size='xsmall'>

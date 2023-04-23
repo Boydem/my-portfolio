@@ -2,6 +2,7 @@ export interface IProject {
     _id: string
     title: string
     desc: string
+    shortDesc: string
     repoURL: string
     url: string
     stack: string[]

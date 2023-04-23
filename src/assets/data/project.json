@@ -2,11 +2,14 @@
     {
         "_id": "quix",
         "title": "Editor quix",
-        "desc": "Lorem Ipsum",
+        "shortDesc": "Website builder",
+        "desc": "Editor quix is a user-friendly website builder with smart components like chat, forms, maps, and scheduling. Its admin panel provides real-time statistics, live chat, email management, lead organization, and a calendar for meetings. It's a great tool for creating a website quickly and easily, without needing to learn coding.",
         "stack": [
-            "Lorem Ipsum",
-            "Lorem Ipsum",
-            "Lorem Ipsum"
+            "MongoDB",
+            "Express",
+            "React",
+            "Node.js",
+            "Socket.io"
         ],
         "repoURL": "https://github.com/Boydem/quix-frontend",
         "url": "https://editorquix.com",
@@ -20,11 +23,13 @@
     {
         "_id": "airbnb",
         "title": "Airbnb clone",
-        "desc": "Lorem Ipsum",
+        "shortDesc": "Sharing platform",
+        "desc": "The Airbnb clone app offers a seamless booking experience, with search, filter, and map view features. It was a great front-end challenge for me to create an optimized clone of this app.",
         "stack": [
-            "Lorem Ipsum",
-            "Lorem Ipsum",
-            "Lorem Ipsum"
+            "MongoDB",
+            "Express",
+            "React",
+            "Node.js"
         ],
         "repoURL": "https://github.com/Boydem/airbnb-frontend",
         "url": "https://airbnb-frontend-y5qm.onrender.com/",
@@ -38,11 +43,13 @@
     {
         "_id": "simon",
         "title": "Simon says",
-        "desc": "Lorem Ipsum",
+        "shortDesc": "Memory Game",
+        "desc": "Simon Says is a MERN app that brings back the classic memory game we all know and love. As a developer, I had a lot of fun creating this app and learned a great deal during the development process",
         "stack": [
-            "Lorem Ipsum",
-            "Lorem Ipsum",
-            "Lorem Ipsum"
+            "MongoDB",
+            "Express",
+            "React",
+            "Node.js"
         ],
         "repoURL": "https://github.com/Boydem/simon-says",
         "url": "https://boydem.github.io/simon-frontend/",
@@ -56,11 +63,12 @@
     {
         "_id": "meme",
         "title": "Meme Generator",
-        "desc": "Lorem Ipsum",
+        "shortDesc": "Tool App",
+        "desc": "The meme generator app, written in vanilla JavaScript, is fast and easy to use. Users can create and share memes quickly, and save them to their local session. It's the perfect tool for adding some humor to online conversations.",
         "stack": [
-            "Lorem Ipsum",
-            "Lorem Ipsum",
-            "Lorem Ipsum"
+            "Vanilla JavaScript",
+            "HTML",
+            "CSS"
         ],
         "repoURL": "https://github.com/Boydem/Meme-Generator",
         "url": "https://boydem.github.io/Meme-Generator/",
@@ -74,11 +82,12 @@
     {
         "_id": "minesweeper",
         "title": "Minesweeper",
-        "desc": "Lorem Ipsum",
+        "shortDesc": "Game",
+        "desc": "Minesweeper, written in vanilla JavaScript, was my first project and the most awesome developing experience. It was a great opportunity to learn JavaScript fundamentals and apply them to create a classic and entertaining game.",
         "stack": [
-            "Lorem Ipsum",
-            "Lorem Ipsum",
-            "Lorem Ipsum"
+            "Vanilla JavaScript",
+            "HTML",
+            "CSS"
         ],
         "repoURL": "https://github.com/Boydem/minesweeper",
         "url": "https://boydem.github.io/minesweeper/",
@@ -92,11 +101,10 @@
     {
         "_id": "bitcoin",
         "title": "Bitcoin app",
-        "desc": "Lorem Ipsum",
+        "shortDesc": "Tool App",
+        "desc": "The Bitcoin app, written in Angular, is an online bitcoin wallet with user authentication and full CRUD functionality for contacts. Users can easily transfer money between their contacts and manage their bitcoin transactions with ease. It's a secure and convenient tool for managing your bitcoin funds online.",
         "stack": [
-            "Lorem Ipsum",
-            "Lorem Ipsum",
-            "Lorem Ipsum"
+            "Angular"
         ],
         "repoURL": "https://github.com/Boydem/Angular-MisterBitcoin",
         "url": "https://boydem.github.io/Angular-MisterBitcoin/#/",

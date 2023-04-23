@@ -25,8 +25,11 @@
                     }
                 }
             }
-            .title-wrapper {
+            .text-wrapper {
                 align-self: flex-start;
+                display: flex;
+                flex-direction: column;
+                gap: 0.5rem;
             }
             .scroll-indicator {
                 display: flex;

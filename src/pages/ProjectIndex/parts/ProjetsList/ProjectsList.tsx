@@ -21,7 +21,7 @@ export function ProjectsList({ projects, handleMouseHover }: Props) {
                         <Text type='title' size='medium'>
                             {proj.title}
                         </Text>
-                        <Text size='xsmall'>{proj.stack[0]}</Text>
+                        <Text size='xsmall'>{proj.shortDesc}</Text>
                     </Link>
                 </li>
             ))}
