@@ -23,11 +23,13 @@ function App() {
     const dispatch = useDispatch()
 
     useEffect(() => {
+        if (isTouchDevice) return
         setMousePos(mousePos)
-    }, [mousePos])
+    }, [mousePos, isTouchDevice])
     useEffect(() => {
+        if (isTouchDevice) return
         setMouseTarget(target)
-    }, [target])
+    }, [target, isTouchDevice])
     useEffect(() => {
         dispatch({ type: 'SET_IS_TOUCH_DEVICE', isTouchDevice })
     }, [isTouchDevice, dispatch])
