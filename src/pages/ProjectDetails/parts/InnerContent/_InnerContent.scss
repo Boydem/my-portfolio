@@ -64,6 +64,12 @@
                 }
             }
             @media (min-width: $break-medium) {
+                width: 75vw;
+                .scroll-indicator {
+                    right: $layout-padding-md;
+                }
+            }
+            @media (min-width: $break-large) {
                 width: 55vw;
                 .scroll-indicator {
                     right: $layout-padding-lg;
