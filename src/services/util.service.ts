@@ -1,5 +1,5 @@
 export const utilService = { debounce }
-function debounce<T extends Function>(cb: T, wait = 20) {
+function debounce<T extends Function>(cb: T, wait = 100) {
     let timer: NodeJS.Timeout
     let callable = (...args: any) => {
         clearTimeout(timer)
