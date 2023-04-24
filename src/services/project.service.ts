@@ -1,5 +1,4 @@
 import { IProject, IProjectWithNext } from '../models/project'
-import { httpService } from './http.service'
 
 export const projectsService = {
     loadProjects,

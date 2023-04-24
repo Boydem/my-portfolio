@@ -28,7 +28,7 @@
         "stack": [
             "MongoDB",
             "Express",
-            "React",
+            "React Typescript",
             "Node.js"
         ],
         "repoURL": "https://github.com/Boydem/airbnb-frontend",
@@ -44,11 +44,11 @@
         "_id": "simon",
         "title": "Simon says",
         "shortDesc": "Memory Game",
-        "desc": "Simon Says is a MERN app that brings back the classic memory game we all know and love. As a developer, I had a lot of fun creating this app and learned a great deal during the development process",
+        "desc": "Simon Says is a MERN app that brings back the classic memory game we all know and love. As a developer, I had a lot of fun creating this app and learned Typescript during the development process",
         "stack": [
             "MongoDB",
             "Express",
-            "React",
+            "React Typescript",
             "Node.js"
         ],
         "repoURL": "https://github.com/Boydem/simon-says",
