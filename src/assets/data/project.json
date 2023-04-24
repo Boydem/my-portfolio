@@ -14,9 +14,9 @@
         "repoURL": "https://github.com/Boydem/quix-frontend",
         "url": "https://editorquix.com",
         "imgsURL": [
-            "https://res.cloudinary.com/dsperrtyj/image/upload/v1682116630/www.editorquix.com__6_-min_q6psrk.png",
-            "https://res.cloudinary.com/dsperrtyj/image/upload/v1682077632/google-pixelbook-mockup_4_-PhotoRoom.png-PhotoRoom_ef4lxv.png",
-            "https://res.cloudinary.com/dsperrtyj/image/upload/v1682078271/editor-iphone_intkns.png"
+            "https://res.cloudinary.com/dsperrtyj/image/upload/v1682340620/www.editorquix.com_-_6_-min_uug1im.webp",
+            "https://res.cloudinary.com/dsperrtyj/image/upload/v1682338948/google-pixelbook-mockup_4_-PhotoRoom.png-PhotoRoom_m4dwhw.webp",
+            "https://res.cloudinary.com/dsperrtyj/image/upload/v1682338959/editor-iphone_jnhqlr.webp"
         ],
         "createdAt": 12345678
     },
@@ -34,9 +34,9 @@
         "repoURL": "https://github.com/Boydem/airbnb-frontend",
         "url": "https://airbnb-frontend-y5qm.onrender.com/",
         "imgsURL": [
-            "https://res.cloudinary.com/dsperrtyj/image/upload/v1682116719/airbnb-frontend-y5qm.onrender.com__3_-min_wnroeg.png",
-            "https://res.cloudinary.com/dsperrtyj/image/upload/v1682079297/google-pixelbook-mockup_11_-PhotoRoom.png-PhotoRoom_azvvrh.png",
-            "https://res.cloudinary.com/dsperrtyj/image/upload/v1682079610/airbnb-iphone2_pr4hry.png"
+            "https://res.cloudinary.com/dsperrtyj/image/upload/v1682340439/airbnb-frontend-y5qm.onrender.com_-_3_-min_vzmmmb.webp",
+            "https://res.cloudinary.com/dsperrtyj/image/upload/v1682338914/google-pixelbook-mockup-_11_-PhotoRoom.png-PhotoRoom_jj68cf.webp",
+            "https://res.cloudinary.com/dsperrtyj/image/upload/v1682338860/airbnb-iphone_1_1_wi0lvq.webp"
         ],
         "createdAt": 12345678
     },
@@ -54,9 +54,9 @@
         "repoURL": "https://github.com/Boydem/simon-says",
         "url": "https://boydem.github.io/simon-frontend/",
         "imgsURL": [
-            "https://res.cloudinary.com/dsperrtyj/image/upload/v1682116715/boydem.github.io_simon-frontend__2_-min_romi37.png",
-            "https://res.cloudinary.com/dsperrtyj/image/upload/v1682077630/google-pixelbook-mockup_8_-PhotoRoom.png-PhotoRoom_psebpr.png",
-            "https://res.cloudinary.com/dsperrtyj/image/upload/v1682078272/simon-iphone_wuus2c.png"
+            "https://res.cloudinary.com/dsperrtyj/image/upload/v1682340445/boydem.github.io_simon-frontend_-_2_-min_bsrni2.webp",
+            "https://res.cloudinary.com/dsperrtyj/image/upload/v1682338941/google-pixelbook-mockup_8_-PhotoRoom.png-PhotoRoom_pi8ivx.webp",
+            "https://res.cloudinary.com/dsperrtyj/image/upload/v1682338951/simon-iphone_fbdybf.webp"
         ],
         "createdAt": 12345678
     },
@@ -73,9 +73,9 @@
         "repoURL": "https://github.com/Boydem/Meme-Generator",
         "url": "https://boydem.github.io/Meme-Generator/",
         "imgsURL": [
-            "https://res.cloudinary.com/dsperrtyj/image/upload/v1682116627/boydem.github.io_Meme-Generator__2_-min_mhfvh6.png",
-            "https://res.cloudinary.com/dsperrtyj/image/upload/v1682078364/google-pixelbook-mockup_7_-PhotoRoom.png-PhotoRoom_febqty.png",
-            "https://res.cloudinary.com/dsperrtyj/image/upload/v1682078272/meme-iphone_lxjamu.png"
+            "https://res.cloudinary.com/dsperrtyj/image/upload/v1682340441/boydem.github.io_Meme-Generator_-_2_-min_xf83nn.webp",
+            "https://res.cloudinary.com/dsperrtyj/image/upload/v1682338943/google-pixelbook-mockup_7_-PhotoRoom.png-PhotoRoom_yk3rqj.webp",
+            "https://res.cloudinary.com/dsperrtyj/image/upload/v1682338957/meme-iphone_etmvpi.webp"
         ],
         "createdAt": 12345678
     },
@@ -92,9 +92,9 @@
         "repoURL": "https://github.com/Boydem/minesweeper",
         "url": "https://boydem.github.io/minesweeper/",
         "imgsURL": [
-            "https://res.cloudinary.com/dsperrtyj/image/upload/v1682116628/boydem.github.io_minesweeper__2_-min_r2kcp0.png",
-            "https://res.cloudinary.com/dsperrtyj/image/upload/v1682077631/google-pixelbook-mockup_5_-PhotoRoom.png-PhotoRoom_lfafu4.png",
-            "https://res.cloudinary.com/dsperrtyj/image/upload/v1682077630/google-pixelbook-mockup_6_-PhotoRoom.png-PhotoRoom_chvzwk.png"
+            "https://res.cloudinary.com/dsperrtyj/image/upload/v1682340444/boydem.github.io_minesweeper_-_2_-min_ucsts8.webp",
+            "https://res.cloudinary.com/dsperrtyj/image/upload/v1682338946/google-pixelbook-mockup_5_-PhotoRoom.png-PhotoRoom_jujlkq.webp",
+            "https://res.cloudinary.com/dsperrtyj/image/upload/v1682338944/google-pixelbook-mockup_6_-PhotoRoom.png-PhotoRoom_k7f7iw.webp"
         ],
         "createdAt": 12345678
     },
@@ -109,9 +109,9 @@
         "repoURL": "https://github.com/Boydem/Angular-MisterBitcoin",
         "url": "https://boydem.github.io/Angular-MisterBitcoin/#/",
         "imgsURL": [
-            "https://res.cloudinary.com/dsperrtyj/image/upload/v1682116678/boydem.github.io_Angular-MisterBitcoin__5_-min_emwmxf.png",
-            "https://res.cloudinary.com/dsperrtyj/image/upload/v1682077633/google-pixelbook-mockup_1_-PhotoRoom.png-PhotoRoom_byaaoe.png",
-            "https://res.cloudinary.com/dsperrtyj/image/upload/v1682078271/bitcoin-iphone_jaynfi.png"
+            "https://res.cloudinary.com/dsperrtyj/image/upload/v1682340443/boydem.github.io_Angular-MisterBitcoin_-_5_-min_i1qvl6.webp",
+            "https://res.cloudinary.com/dsperrtyj/image/upload/v1682338950/google-pixelbook-mockup_1_-PhotoRoom.png-PhotoRoom_ujzrgu.webp",
+            "https://res.cloudinary.com/dsperrtyj/image/upload/v1682338961/bitcoin-iphone_wxj5fb.webp"
         ],
         "createdAt": 12345678
     }
