@@ -8,8 +8,6 @@
         align-items: center;
         justify-content: center;
         position: relative;
-        // margin-inline-end: 2rem;
-        // height: 30vh;
         aspect-ratio: 2;
         .img-container {
             overflow: hidden;
@@ -18,17 +16,8 @@
             left: 0;
             width: 100%;
             height: 100%;
-            transition: all 0.6s cubic-bezier(0.85, 0, 0.15, 1);
             border: 1px solid $c-text;
             clip-path: polygon(0% calc(0), 100% calc(0), 100% calc(0), 0% calc(0));
-            // &.hovered {
-            //     clip-path: polygon(
-            //         0% calc(var(--tl) * 100%),
-            //         100% calc(var(--tr) * 100%),
-            //         100% calc(var(--br) * 100%),
-            //         0% calc(var(--bl) * 100%)
-            //     );
-            // }
             > img {
                 position: absolute;
                 top: 0;

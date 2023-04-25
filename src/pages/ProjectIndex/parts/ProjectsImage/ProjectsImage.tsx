@@ -49,11 +49,7 @@ export function ProjectsImage({ projects, hoveredProject, hoverState }: Props) {
     return (
         <div className='projects-image'>
             {projects.map(proj => (
-                <div
-                    ref={hoveredProject === proj ? hoveredRef : null}
-                    className={`img-container ${hoveredProject === proj ? 'hovered' : ''}`}
-                    key={`pi-${proj._id}`}
-                >
+                <div ref={hoveredProject === proj ? hoveredRef : null} className='img-container' key={`pi-${proj._id}`}>
                     <img src={proj.imgsURL[0]} alt={proj.title} />
                 </div>
             ))}
