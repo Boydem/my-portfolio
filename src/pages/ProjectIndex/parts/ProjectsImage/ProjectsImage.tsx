@@ -7,25 +7,27 @@ interface Props {
     hoveredProject: IProject | null
 }
 
+const cssPropsFrames = [
+    { tl: 1, tr: 1, bl: 1, br: 1 },
+    { tl: 0.4, tr: 0.6, bl: 1, br: 1 },
+    { tl: 0, tr: 0, bl: 1, br: 1 },
+    { tl: 0, tr: 0, bl: 0, br: 0 },
+]
+const keyFrames = cssPropsFrames.map(keyframe => ({
+    clipPath: `polygon(
+        0% calc(${keyframe.tl} * 100%),
+        100% calc(${keyframe.tr} * 100%),
+        100% calc(${keyframe.bl} * 100%),
+        0% calc(${keyframe.br} * 100%)
+    )`,
+}))
+
 export function ProjectsImage({ projects, hoveredProject, hoverState }: Props) {
     const [lastHovered, setLastHovered] = useState<HTMLDivElement | null>(null)
     const hoveredRef = useRef<HTMLDivElement | null>(null)
+
     useLayoutEffect(() => {
         if (!hoverState) return
-        const cssPropsFrames = [
-            { tl: 1, tr: 1, bl: 1, br: 1 },
-            { tl: 0.4, tr: 0.6, bl: 1, br: 1 },
-            { tl: 0, tr: 0, bl: 1, br: 1 },
-            { tl: 0, tr: 0, bl: 0, br: 0 },
-        ]
-        const keyFrames = cssPropsFrames.map(keyframe => ({
-            clipPath: `polygon(
-                0% calc(${keyframe.tl} * 100%),
-                100% calc(${keyframe.tr} * 100%),
-                100% calc(${keyframe.bl} * 100%),
-                0% calc(${keyframe.br} * 100%)
-            )`,
-        }))
         if (lastHovered) {
             lastHovered.animate(keyFrames[3], {
                 duration: 750,
