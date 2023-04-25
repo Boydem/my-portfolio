@@ -16,12 +16,12 @@ export function ProjectIndex() {
 
     function handleMouseHover(type: 'enter' | 'leave', proj: IProject) {
         if (isTouchDevice) return
-        setHoveredProject(proj)
-        setHoverState(type)
         if (type === 'leave') {
             setHoveredProject(null)
-            setHoverState(null)
+        } else {
+            setHoveredProject(proj)
         }
+        setHoverState(type)
     }
     return (
         <section className='project-index'>
