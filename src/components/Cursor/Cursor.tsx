@@ -2,7 +2,6 @@ import { useEffect, useRef, useState } from 'react'
 import { BsPlus } from 'react-icons/bs'
 import { RootState } from '../../store/store'
 import { useSelector } from 'react-redux'
-import { cubicBezier, motion } from 'framer-motion'
 
 export function Cursor() {
     const { mousePos, target } = useSelector((storeState: RootState) => storeState.systemModule)
@@ -29,28 +28,20 @@ export function Cursor() {
         handleHoverEffects(target)
     }, [target])
 
+    useEffect(() => {
+        if (!cursorRef.current) return
+        const x = mousePos.x - cursorRef.current.offsetWidth / 2,
+            y = mousePos.y - cursorRef.current.offsetHeight / 2
+        const keyframes = {
+            transform: `translate(${x}px,${y}px)`,
+        }
+        cursorRef.current.animate(keyframes, { duration: 200, fill: 'forwards' })
+    }, [mousePos])
+
     return (
-        <motion.div
-            className='cursor'
-            ref={cursorRef}
-            animate={
-                cursorRef.current
-                    ? {
-                          x:
-                              window.innerWidth > mousePos.x + cursorRef.current.offsetWidth / 2
-                                  ? mousePos.x - cursorRef.current.offsetWidth / 2
-                                  : window.innerWidth - cursorRef.current.offsetWidth / 2,
-                          y:
-                              window.innerHeight > mousePos.y + cursorRef.current.offsetHeight / 2
-                                  ? mousePos.y - cursorRef.current.offsetHeight / 2
-                                  : window.innerHeight - cursorRef.current.offsetHeight / 2,
-                      }
-                    : { x: 0, y: 0 }
-            }
-            transition={{ duration: 0.1, ease: cubicBezier(0, 1, 0, 1) }}
-        >
+        <div className='cursor' ref={cursorRef}>
             <div className={`cursor-shape ${isHover ? 'hover' : ''} ${isLinkHover ? 'link-hover' : ''}`}></div>
             <div className='cursor-cross'>{isLinkHover ? <BsPlus color='var(--c-bg)' /> : null}</div>
-        </motion.div>
+        </div>
     )
 }
