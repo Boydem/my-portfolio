@@ -27,14 +27,18 @@ export function ProjectsImage({ projects, hoveredProject, hoverState }: Props) {
             )`,
         }))
         if (lastHovered) {
-            lastHovered.animate(keyFrames[3], { duration: 500, fill: 'forwards', easing: 'ease-out' })
+            lastHovered.animate(keyFrames[3], {
+                duration: 750,
+                fill: 'forwards',
+                easing: 'cubic-bezier(0.32, 0, 0.67, 0)',
+            })
         }
         if (hoverState === 'enter') {
             const currHoveredEl = hoveredRef.current
             currHoveredEl?.animate([keyFrames[0], keyFrames[1], keyFrames[2]], {
-                duration: 250,
+                duration: 1000,
                 fill: 'forwards',
-                easing: 'ease-in',
+                easing: 'cubic-bezier(0.33, 1, 0.68, 1)',
             })
             setLastHovered(currHoveredEl)
         }
