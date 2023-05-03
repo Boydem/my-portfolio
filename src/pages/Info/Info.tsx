@@ -50,9 +50,9 @@ export function Info() {
                         <Text data-hover size='xsmall' display='block'>
                             <Link
                                 target='_blank'
-                                to={'https://mail.google.com/mail/?view=cm&fs=1&to=noyemdahan@gmail.com'}
+                                to={'https://mail.google.com/mail/?view=cm&fs=1&to=NoamDahanDev@gmail.com'}
                             >
-                                Noyemdahan@gmail.com
+                                NoamDahanDev@gmail.com
                             </Link>
                         </Text>
                     </div>
@@ -61,7 +61,7 @@ export function Info() {
                             Lets talk
                         </Text>
                         <Text data-hover size='xsmall' display='block'>
-                            <Link to={'tel:972523130909'}>0523130909</Link>
+                            <Link to={'tel:972523130909'}>+972523130909</Link>
                         </Text>
                     </div>
                 </div>
